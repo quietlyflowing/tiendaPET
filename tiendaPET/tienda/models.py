@@ -75,3 +75,23 @@ class Usuarios(models.Model):
     email=models.CharField(blank=False, max_length=100, null=False)
     password=models.CharField(blank=False, max_length=255, null=False)
     clienteId=models.ForeignKey('Clientes', on_delete=models.CASCADE, null=True)
+
+class MensajesContacto(models.Model):
+    DUDA="DD"
+    RECLAMO="RC"
+    FELICITACION="FC"
+    SUGERENCIA="SG"
+    DEFAULT="DF"
+    nombre=models.CharField(blank=False, max_length=100, null=False)
+    email=models.CharField(blank=False, max_length=100, null=False)
+    MOTIVO_CONSULTA_CHOICES = [(DUDA, "Duda"),
+    (SUGERENCIA, "Sugerencia"),
+    (RECLAMO, "Reclamo"),
+    (FELICITACION, "Felicitación"),
+    (DEFAULT, "Seleccione un motivo de consulta")]
+    motivoContacto=models.CharField(max_length=2, choices=MOTIVO_CONSULTA_CHOICES, default=DEFAULT)
+    message=models.TextField(blank=False, max_length=700, null=False)
+    
+class MasVistos(models.Model):
+    id=models.AutoField(primary_key=True)
+    productosId=models.ForeignKey('Productos', on_delete=models.CASCADE, null=False)
