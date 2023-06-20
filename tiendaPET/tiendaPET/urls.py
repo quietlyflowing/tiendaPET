@@ -1,3 +1,6 @@
+from tienda import views
+from django.conf import settings
+from django.conf.urls.static import static
 """
 URL configuration for tiendaPET project.
 
@@ -19,4 +22,9 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-]
+    path('', views.index),
+    path('gatos/', views.cats),
+    path('perros/', views.dogs),
+    path('contacto/', views.contact)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+

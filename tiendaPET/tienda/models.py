@@ -74,4 +74,4 @@ class Donantes(models.Model):
 class Usuarios(models.Model):
     email=models.CharField(blank=False, max_length=100, null=False)
     password=models.CharField(blank=False, max_length=255, null=False)
-    clienteId=models.ForeignKey('Clientes', on_delete=models.CASCADE)
+    clienteId=models.ForeignKey('Clientes', on_delete=models.CASCADE, null=True)

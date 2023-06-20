@@ -1,0 +1,35 @@
+{% load static %}  
+  <!-- Inicio Navbar -->
+    <nav class="navbar navbar-expand-md navbar-dark" style="background-color: #546c1b">
+      <div class="container-fluid">
+        <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand d-md-none" href="/" style="margin-left: -14rem !important;">TiendaPET</a>
+        <a class="navbar-brand d-none d-md-block" href="/"><img src="{% static 'tienda/img/logo.png' %}" height="32"></a>
+        <!--Oculto en la pantalla más pequeña-->
+        <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+          <div class="offcanvas-header" style="background-color: #546c1b">
+            <h5 class="navbar-brand" id="offcanvasNavbarLabel" style="--bs-navbar-brand-margin-end:16rem">TiendaPET</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body" style="background-color: #546c1b">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link active" href="/perros">Productos para Perros</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/gatos">Productos para Gatos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/contacto">Contacto</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <form role="search">
+          <input class="form-control" data-bs-toggle="modal" data-bs-target="#modalBusqueda" type="search" id="busqueda" placeholder="Búsqueda" aria-label="Búsqueda">
+        </form>
+      </div>
+    </nav>
+    <!--fin navbar-->
