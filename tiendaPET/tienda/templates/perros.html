@@ -19,25 +19,17 @@
       <!--indicador de carrito de compra-->
       <div class="d-flex py-3 align-items-center flex flex-row-reverse" id="indicadorCarrito"></div>
       <!--fin indicador de carrito-->
-      <!--Inicio Alerta-->
-      <div class="alert" id="liveAlertPlaceholder"></div>
-      <!--Fin Alerta-->
+    {% include 'components/alert.html' %}
      {% include 'components/jumbotron.html' %}
      <div class="row">
         <div class="col-8">
           <h1>Lo más visto</h1>
         </div>
       </div>
-      <div class="col-4 text-end d-md-none" style=" margin-left: 21.5rem; margin-bottom: 1rem;">	
-        <button class="btn btn-primary" type="button" data-bs-target="#carruselMovil" data-bs-slide="prev">
-          <i class="fa-solid fa-arrow-left"></i>
-        </button>
-        <button class="btn btn-primary" type="button" data-bs-target="#carruselMovil" data-bs-slide="next">
-          <i class="fa-solid fa-arrow-right"></i>
-        </button>
-      </div>
+     <!-- <div class="col-4 text-end d-md-none" style=" margin-left: 21.5rem; margin-bottom: 1rem;">	
+      </div>-->
       <div class="d-none d-md-block">
-      <div class="row mb-4">
+     <!-- <div class="row mb-4">
 
         <div class="col-md-4 col-lg-4">
           <div class="card mb-2 h-100" id="7" >
@@ -75,9 +67,9 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
       
-      <div class="row mb-4">
+     <!-- <div class="row mb-4">
 
         <div class="col-md-6 col-lg-4">
           <div class="card h-100" id="10">
@@ -115,7 +107,8 @@
           </div>
         </div>
 
-      </div>
+      </div> -->
+
     </div>
       <div id="carruselMovil" class="carousel slide d-md-none" data-bs-ride="carousel">
         <div class="carousel-inner">

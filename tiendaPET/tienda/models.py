@@ -2,51 +2,38 @@ from django.db import models
 
 # Create your models here.
 class Categorias(models.Model):
+    id=models.AutoField(primary_key=True)
     nombre=models.CharField(blank=False, max_length=50, null=False)
 
-    def __str__(self):
-        return str(self.nombre)
 
 class Mascotas(models.Model):
     especie=models.CharField(blank=False, max_length=50, null=False)
 
-    def __str__(self):
-        return str(self.especie)
 
 class Regiones(models.Model):
-    cutReg=models.IntegerField(db_column='cut_reg', primary_key=True)
-    nombre=models.CharField(blank=False, db_column='nombre', max_length=100)
-    def __str__(self):
-        return self.nombre
+    nombre=models.CharField(blank=False, max_length=250)
+    numeralRomano=models.CharField(blank=False, max_length=2, db_column='numeral_romano')
 
 class Provincias(models.Model):
-    cutProv=models.IntegerField(db_column='cut_prov', primary_key=True)
-    nombre=models.CharField(blank=False, max_length=100)
+    nombre=models.CharField(blank=False, max_length=255)
     region=models.ForeignKey('Regiones', on_delete=models.CASCADE) 
-    def __str__(self):
-        return self.nombre
 
 class Comunas(models.Model):
-    cutCom=models.IntegerField(db_column='cut_com', primary_key=True)
-    nombre=models.CharField(blank=False, db_column='nombre', max_length=50)
+    nombre=models.CharField(blank=False, max_length=255)
     provincia=models.ForeignKey('Provincias', on_delete=models.CASCADE)
-    regionProv=models.ForeignKey('Regiones', on_delete=models.CASCADE) 
-    def __str__(self):
-        return self.nombre
 
 class Productos(models.Model):
     nombre=models.CharField(blank=False, max_length=100, null=False)
     precio=models.IntegerField(blank=False, null=False)
     imagen=models.CharField(blank=False,max_length=255, null=False)
-    mascotaId=models.ForeignKey('Mascotas', on_delete=models.CASCADE)
+    mascota=models.ForeignKey('Mascotas', on_delete=models.CASCADE)
     stock=models.IntegerField(blank=False)
-    categoria_id=models.ForeignKey('Categorias', on_delete=models.CASCADE)
-
-    def __str__(self):
-        return self.nombre
+    categoria=models.ForeignKey('Categorias', on_delete=models.CASCADE)
+    descripcion=models.TextField(blank=False, max_length=350, null=False, default="Lorem Ipsum Dolor Sit Amen")
+    conteoVistas=models.IntegerField(blank=False, default=0, db_column='conteo_vistas',null=False)
 
 class Carrito(models.Model):
-    clienteId=models.ForeignKey('Clientes', on_delete=models.CASCADE)
+    cliente=models.ForeignKey('Clientes', on_delete=models.CASCADE, null=True)
     valorTotal=models.IntegerField(blank=False, default=0)
 
 
@@ -56,11 +43,8 @@ class Clientes(models.Model):
     primerApellido=models.CharField(blank=False, max_length=100, null=False)    
     segundoApellido=models.CharField(blank=True, max_length=100, null=True)
     direccion=models.CharField(blank=False, max_length=100, null=False)
-    comId=models.ForeignKey('Comunas', on_delete=models.CASCADE)
-    # provId=models.ForeignKey('Comunas', on_delete=models.CASCADE)
-    # cutReg=models.ForeignKey('Comunas', on_delete=models.CASCADE) 
-    def __str__(self):
-        return self.rut + self.dv
+    comuna=models.ForeignKey('Comunas', on_delete=models.CASCADE)
+
 
 class Donantes(models.Model):
     rut=models.IntegerField(blank=False, null=False)
@@ -68,13 +52,6 @@ class Donantes(models.Model):
     primerApellido=models.CharField(blank=False, max_length=100, null=False)    
     segundoApellido=models.CharField(blank=True, max_length=100, null=True)
     direccion=models.CharField(blank=False, max_length=100, null=False)
-    def __str__(self):
-        return self.rut + self.dv
-
-class Usuarios(models.Model):
-    email=models.CharField(blank=False, max_length=100, null=False)
-    password=models.CharField(blank=False, max_length=255, null=False)
-    clienteId=models.ForeignKey('Clientes', on_delete=models.CASCADE, null=True)
 
 class MensajesContacto(models.Model):
     DUDA="DD"
@@ -91,7 +68,3 @@ class MensajesContacto(models.Model):
     (DEFAULT, "Seleccione un motivo de consulta")]
     motivoContacto=models.CharField(max_length=2, choices=MOTIVO_CONSULTA_CHOICES, default=DEFAULT)
     message=models.TextField(blank=False, max_length=700, null=False)
-    
-class MasVistos(models.Model):
-    id=models.AutoField(primary_key=True)
-    productosId=models.ForeignKey('Productos', on_delete=models.CASCADE, null=False)

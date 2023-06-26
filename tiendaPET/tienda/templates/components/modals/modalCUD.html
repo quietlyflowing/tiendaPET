@@ -1,0 +1,42 @@
+<div class="modal fade" id="modalCUD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Editar artículo</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <img src="https://media.istockphoto.com/id/1455584807/es/foto/maniqu%C3%AD-con-traje-a-medida-en-taller-de-lujo.webp?s=2048x2048&w=is&k=20&c=TfJAru6CAtokqYHWXPT9pWTyJt2ihnmbPExYVG4bn04=" class="img-thumbnail" alt="...">
+        <form action="" method="POST" enctype="multipart/form-data">
+          <!--     {% csrf_token %}
+ -->
+          <label for="nombre" class="form-label">Nombre del artículo</label>
+          <input type="text" id="nombre" class="form-control" name="nombre" required maxlength="255">
+          <label for="precio" class="form-label">Precio</label>
+          <input type="number" id="precio" name="precio" class="form-control" required>
+          <div class="mb-3">
+            <label for="formFile" class="form-label">Subir Imagen</label>
+            <input class="form-control" type="file" id="imagen">
+          </div>
+          <label for="stockInicial" class="form-label">Stock Inicial</label>
+          <input type="number" id="Stock" name="stockInicial" class="form-control" required>
+          <label for="mascota" class="form-label">Mascota</label>
+          <select class="form-select" name="mascota">
+            <option selected>Mascota...</option>
+            <option value="1">Perro</option>
+            <option value="2">Gato</option>
+          </select>
+          <label for="categoria" class="form-label">Categoria</label>
+          <select class="form-select" name="categoria"> 
+            <option selected>Seleccione:</option>
+            <option value="1">Correa</option>
+            <option value="2">Bandana</option>
+          </select>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar Artículo</button>
+      </div>
+    </div>
+  </div>
+</div>

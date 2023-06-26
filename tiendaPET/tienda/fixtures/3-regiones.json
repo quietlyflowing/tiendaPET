@@ -1,0 +1,130 @@
+[
+  {
+    "model": "tienda.regiones",
+    "pk": 1,
+    "fields": {
+      "nombre": "Tarapacá",
+      "numeralRomano": "I"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 2,
+    "fields": {
+      "nombre": "Antofagasta",
+      "numeralRomano": "II"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 3,
+    "fields": {
+      "nombre": "Atacama",
+      "numeralRomano": "III"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 4,
+    "fields": {
+      "nombre": "Coquimbo",
+      "numeralRomano": "IV"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 5,
+    "fields": {
+      "nombre": "Valparaíso",
+      "numeralRomano": "V"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 6,
+    "fields": {
+      "nombre": "Libertador General Bernardo O'Higgins",
+      "numeralRomano": "VI"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 7,
+    "fields": {
+      "nombre": "Maule",
+      "numeralRomano": "VII"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 8,
+    "fields": {
+      "nombre": "Biobío",
+      "numeralRomano": "VIII"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 9,
+    "fields": {
+      "nombre": "La Araucanía",
+      "numeralRomano": "IX"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 10,
+    "fields": {
+      "nombre": "Los Lagos",
+      "numeralRomano": "X"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 11,
+    "fields": {
+      "nombre": "Aysén del General Carlos Ibáñez del Campo",
+      "numeralRomano": "XI"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 12,
+    "fields": {
+      "nombre": "Magallanes y de la Antártica Chilena",
+      "numeralRomano": "XII"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 13,
+    "fields": {
+      "nombre": "Metropolitana de Santiago",
+      "numeralRomano": "R.M."
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 14,
+    "fields": {
+      "nombre": "Los Ríos",
+      "numeralRomano": "XIV"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 15,
+    "fields": {
+      "nombre": "Arica y Parinacota",
+      "numeralRomano": "XV"
+    }
+  },
+  {
+    "model": "tienda.regiones",
+    "pk": 16,
+    "fields": {
+      "nombre": "Ñuble",
+      "numeralRomano": "XVI"
+    }
+  }
+]

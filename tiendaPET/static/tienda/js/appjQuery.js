@@ -27,7 +27,7 @@ document.getElementById("footer").innerHTML = `<div class="container text-center
 showCurrentYearFooter();
 
 
-const alert = (message, type) => {
+const aviso = (message, type) => {
     alertPlaceholder = $('#liveAlertPlaceholder');
     const wrapper = document.createElement('div');
     wrapper.innerHTML = [
@@ -126,7 +126,7 @@ function viewCart(){
     }   
 }
 
-if(windowTitle == "Pago - TiendaPET"){
+
 $('#tablaCheckout').empty();
  const totalQuantity = cart.reduce((accumulator, item) => accumulator + item.cantidad, 0);
   if (totalQuantity !=0) {
@@ -139,7 +139,7 @@ $('#tablaCheckout').empty();
               </tr>`);
         });
     }
-}
+
 
 
 //Selecciona todos los botones de la clase btn-primary dentro de un card-body. Luego, les añade

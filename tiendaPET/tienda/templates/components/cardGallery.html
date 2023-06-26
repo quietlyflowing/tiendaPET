@@ -1,13 +1,16 @@
 {% load static %}
 
 <!--Card-->
-<div class="col-md-4 col-lg-4">
-    <div class="card mb-2 h-100" id={{ id_producto }}>
-        <div class="card-body" style="background-color: #546c1b">
-            <h3 class="card-title" style="color: #f3f3f3">{{Nombre_producto }}</h3>
-            <p class="card-text" style="color: #f3f3f3">{{Precio_Producto }}</p>
-            <button class="btn btn-primary">Agregar al Carro</button>
-            <button type="button" class="btn btn-secondary">Ver</button>
-        </div>
+<div class="col-md-6 col-lg-4">
+    <div class="card h-100" id="{{ id_producto }}">
+      <img src="{% static imagen_producto %}" class="card-image-top" alt="{{ nombre_producto }}"></img>
+      <div class="card-body" style="background-color: #546c1b">
+        <h3 class="card-title" style="color: #f3f3f3">{{ nombre_producto}}</h3>
+        <p class="card-text" style="color: #f3f3f3">${{ precio_producto}}</p>
+        <button class="btn btn-primary" id="botonAgregar">Agregar al Carro</button>
+        <button type="button" class="btn btn-secondary me-4" id="botonVer">Ver</button>
+        <button type="button" class="btn btn-secondary" id="botonEditar">Editar</button>
+        <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar</button>
+      </div>
     </div>
 </div>

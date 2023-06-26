@@ -1,0 +1,450 @@
+[
+  {
+    "model": "tienda.provincias",
+    "pk": 1,
+    "fields": {
+      "nombre": "Arica",
+      "region": 15
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 2,
+    "fields": {
+      "nombre": "Parinacota",
+      "region": 15
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 3,
+    "fields": {
+      "nombre": "Iquique",
+      "region": 1
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 4,
+    "fields": {
+      "nombre": "Tamarugal",
+      "region": 1
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 5,
+    "fields": {
+      "nombre": "Tocopilla",
+      "region": 2
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 6,
+    "fields": {
+      "nombre": "Loa",
+      "region": 2
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 7,
+    "fields": {
+      "nombre": "Antofagasta",
+      "region": 2
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 8,
+    "fields": {
+      "nombre": "Chañaral",
+      "region": 3
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 9,
+    "fields": {
+      "nombre": "Copiapó",
+      "region": 3
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 10,
+    "fields": {
+      "nombre": "Huasco",
+      "region": 3
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 11,
+    "fields": {
+      "nombre": "Elqui",
+      "region": 4
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 12,
+    "fields": {
+      "nombre": "Limarí",
+      "region": 4
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 13,
+    "fields": {
+      "nombre": "Choapa",
+      "region": 4
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 14,
+    "fields": {
+      "nombre": "Petorca",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 15,
+    "fields": {
+      "nombre": "Los Andes",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 16,
+    "fields": {
+      "nombre": "San Felipe de Aconcagua",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 17,
+    "fields": {
+      "nombre": "Quillota",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 18,
+    "fields": {
+      "nombre": "Valparaíso",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 19,
+    "fields": {
+      "nombre": "San Antonio",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 20,
+    "fields": {
+      "nombre": "Isla de Pascua",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 21,
+    "fields": {
+      "nombre": "Marga Marga",
+      "region": 5
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 22,
+    "fields": {
+      "nombre": "Chacabuco",
+      "region": 13
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 23,
+    "fields": {
+      "nombre": "Santiago",
+      "region": 13
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 24,
+    "fields": {
+      "nombre": "Cordillera",
+      "region": 13
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 25,
+    "fields": {
+      "nombre": "Maipo",
+      "region": 13
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 26,
+    "fields": {
+      "nombre": "Melipilla",
+      "region": 13
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 27,
+    "fields": {
+      "nombre": "Talagante",
+      "region": 13
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 28,
+    "fields": {
+      "nombre": "Cachapoal",
+      "region": 6
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 29,
+    "fields": {
+      "nombre": "Colchagua",
+      "region": 6
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 30,
+    "fields": {
+      "nombre": "Cardenal Caro",
+      "region": 6
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 31,
+    "fields": {
+      "nombre": "Curicó",
+      "region": 7
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 32,
+    "fields": {
+      "nombre": "Talca",
+      "region": 7
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 33,
+    "fields": {
+      "nombre": "Linares",
+      "region": 7
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 34,
+    "fields": {
+      "nombre": "Cauquenes",
+      "region": 7
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 35,
+    "fields": {
+      "nombre": "Diguillín",
+      "region": 16
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 36,
+    "fields": {
+      "nombre": "Itata",
+      "region": 16
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 37,
+    "fields": {
+      "nombre": "Punilla",
+      "region": 16
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 38,
+    "fields": {
+      "nombre": "Biobío",
+      "region": 8
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 39,
+    "fields": {
+      "nombre": "Concepción",
+      "region": 8
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 40,
+    "fields": {
+      "nombre": "Arauco",
+      "region": 8
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 41,
+    "fields": {
+      "nombre": "Malleco",
+      "region": 9
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 42,
+    "fields": {
+      "nombre": "Cautín",
+      "region": 9
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 43,
+    "fields": {
+      "nombre": "Valdivia",
+      "region": 14
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 44,
+    "fields": {
+      "nombre": "Ranco",
+      "region": 14
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 45,
+    "fields": {
+      "nombre": "Osorno",
+      "region": 10
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 46,
+    "fields": {
+      "nombre": "Llanquihue",
+      "region": 10
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 47,
+    "fields": {
+      "nombre": "Chiloé",
+      "region": 10
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 48,
+    "fields": {
+      "nombre": "Palena",
+      "region": 10
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 49,
+    "fields": {
+      "nombre": "Coyhaique",
+      "region": 11
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 50,
+    "fields": {
+      "nombre": "Aysén",
+      "region": 11
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 51,
+    "fields": {
+      "nombre": "General Carrera",
+      "region": 11
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 52,
+    "fields": {
+      "nombre": "Capitán Prat",
+      "region": 11
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 53,
+    "fields": {
+      "nombre": "Última Esperanza",
+      "region": 12
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 54,
+    "fields": {
+      "nombre": "Magallanes",
+      "region": 12
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 55,
+    "fields": {
+      "nombre": "Tierra del Fuego",
+      "region": 12
+    }
+  },
+  {
+    "model": "tienda.provincias",
+    "pk": 56,
+    "fields": {
+      "nombre": "Antártica Chilena",
+      "region": 12
+    }
+  }
+]

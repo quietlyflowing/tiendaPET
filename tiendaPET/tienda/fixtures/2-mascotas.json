@@ -1,0 +1,13 @@
+[{
+	"model": "tienda.mascotas",
+	"pk": 1,
+	"fields": {
+		"especie": "gato"
+	}
+}, {
+	"model": "tienda.mascotas",
+	"pk": 2,
+	"fields": {
+		"especie": "gato"
+	}
+}]
