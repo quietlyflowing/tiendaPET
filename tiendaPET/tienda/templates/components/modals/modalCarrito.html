@@ -1,3 +1,4 @@
+  {% load static %}
   <!--Inicio Modal Carrito-->
   <div class="modal fade" id="modalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" >
     <div class="modal-dialog modal-dialog-centered">
@@ -19,19 +20,17 @@
             <th scope="col"></th>
           </tr>
           <tbody id="cuerpoTabla">
-            <!-- <tr>
-              <th scope = "row"><img src="img/placeholder.webp" class="img-thumbnail"></img></th>
-              <td>Producto</td>
-              <td>$1.500</td>
-              <td><input type="number" class="form-control" id="cantidadProducto" ></td>
-              <td><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
-            </tr>
-            <tr>
-              <th scope = "row"><img src="img/placeholder.webp" class="img-thumbnail" height="50"></img></th>
-              <td> <label>Producto</td>
-              <td>$1.500</td>
-              <td><button class="btn btn-danger"><i class="fa-solid fa-trash"></i></button></td>
-            </tr> -->
+            {% for detalle in Detalles %}
+            <article id={{detalle.producto.id}}>
+             <tr>
+              <th scope = "row"><img src="{% static detalle.producto.imagen %}" class="img-thumbnail"></img></th>
+              <td>{{detalle.producto.nombre}}</td>
+              <td>${{detalle.producto.precio}}</td>
+              <td><input type="number" class="form-control" id="CantidadProducto_{{detalle.producto.id}}" value="{{detalle.cantidad}}"></td>
+              <td><button class="btn btn-danger" id="eliminaProducto_{{detalle.producto.id}}"><i class="fa-solid fa-trash"></i></button></td>
+            </tr> 
+          </article>
+            {% endfor %} 
           </tbody>
           </thead>
         </table>

@@ -45,6 +45,12 @@ class Clientes(models.Model):
     direccion=models.CharField(blank=False, max_length=100, null=False)
     comuna=models.ForeignKey('Comunas', on_delete=models.CASCADE)
 
+class DetalleCarrito(models.Model):
+    producto=models.ForeignKey('Productos', on_delete=models.CASCADE)
+    carrito=models.ForeignKey('Carrito', on_delete=models.CASCADE)
+    cantidad=models.IntegerField(blank=False, null=False)
+    precioTotal=models.IntegerField(blank=False, db_column="precio_total", null=False)
+
 
 class Donantes(models.Model):
     rut=models.IntegerField(blank=False, null=False)

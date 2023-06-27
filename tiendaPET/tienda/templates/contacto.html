@@ -37,14 +37,13 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Cuerpo -->
-    {% include 'components/modals/modalBusqueda.html' %}
+    {% comment %} {% include 'components/modals/modalBusqueda.html' %}
     {% include 'components/modals/modalCarrito.html' %}
-    {% include 'components/modals/modalProducto.html' %}
+    {% include 'components/modals/modalProducto.html' %} {% endcomment %}
     {% include  'components/navbar.html' %}
     <!-- Inicio contenedor -->
     <div class="container">
-      <!--indicador de carrito de compra-->
-      <div class="d-flex py-3 align-items-center flex flex-row-reverse" id="indicadorCarrito"></div>
+      {% include 'components/cartButton.html' with carrito_numero=cart_cantidad%}
       <!-- Inicio de la columna de Boostrap -->
       <div class="col-6" style="background-color:white; padding-bottom:8rem;">
         <!-- Inicio del campo Forma -->
@@ -95,7 +94,7 @@
     
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" integrity="sha384-aEDtD4n2FLrMdE9psop0SHdNyy/W9cBjH22rSRp+3wPHd62Y32uijc0H2eLmgaSn" 
     crossorigin="anonymous"></script>
-    <script src="{% static 'tienda/js/appjQuery.js' %}"></script>
+    <script src="{% static 'tienda/js/app.js' %}"></script>
     <script src="{% static 'tienda/js/validate.js' %}"></script>
   </body>
 </html>

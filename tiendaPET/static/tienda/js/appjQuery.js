@@ -3,17 +3,17 @@ const cart = JSON.parse(localStorage.getItem('cart')) || [];
 const windowTitle = $(document).attr('title');
 
 //Crea el indicador del carrito
-function indicadorCarro() {
-$('#indicadorCarrito').empty();
-const totalQuantity = cart.reduce((accumulator, item) => accumulator + item.cantidad, 0);
-$('#indicadorCarrito').append(`<button class="btn btn-primary d-flex align-items-center" id="botonCarro" style="padding: .75rem;">
-<i class="fas fa-shopping-cart ms-2 mb-0"></i> <p class="m-0 me-2"><strong style="margin-left: .75rem;">Carrito: ${totalQuantity}</strong></p> </button>`);
-$('#botonCarro').on("click", function() {
-    viewCart();
-  });
+// function indicadorCarro() {
+// $('#indicadorCarrito').empty();
+// const totalQuantity = cart.reduce((accumulator, item) => accumulator + item.cantidad, 0);
+// $('#indicadorCarrito').append(`<button class="btn btn-primary d-flex align-items-center" id="botonCarro" style="padding: .75rem;">
+// <i class="fas fa-shopping-cart ms-2 mb-0"></i> <p class="m-0 me-2"><strong style="margin-left: .75rem;">Carrito: ${totalQuantity}</strong></p> </button>`);
+// $('#botonCarro').on("click", function() {
+//     viewCart();
+//   });
 
-}
-indicadorCarro();
+// }
+// indicadorCarro();
 console.log("ready!");
 
 function showCurrentYearFooter() {

@@ -25,6 +25,15 @@ urlpatterns = [
     path('', views.index),
     path('gatos/', views.cats),
     path('perros/', views.dogs),
-    path('contacto/', views.contact)
+    path('contacto/', views.contact),
+    #Paths que implementan API
+    path('api/addItem', views.addToCarritoAction),
+    path('api/removeAllTheSameItems/<int:carrito_id>/<int:producto_id>/', views.removeSameRowAction),
+    path('api/updateItems', views.updateCartAction),
+    path('api/getItems/<int:carrito_id>', views.getCartDetails),
+    path('api/getModalCart/', views.modalCarro),
+    path('api/getModalProducto/<int:id>', views.modalProducto),
+    path('api/cartButtonUpdate', views.reloadCartButtton), 
+    path('api/deleteEntireCart/<int:carrito_id>', views.deleteAllCart)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

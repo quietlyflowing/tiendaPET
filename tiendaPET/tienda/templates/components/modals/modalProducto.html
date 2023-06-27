@@ -1,3 +1,21 @@
+ {% load static %}
  <!--Inicio Modal Producto -->
- <div class="modal fade" id="modalProducto" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false"></div>
+ <div class="modal fade" id="modalProducto" tabindex="-1" data-bs-backdrop="static" data-bs-keyboard="false">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" data-bs-backdrop="static" data-bs-keyboard="false" id="tempModal">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h1 class="modal-title fs-5">{{Producto.nombre}}</h1>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <img src="{% static Producto.imagen %}" class="img-fluid">
+            <div class="text-right">{{Producto.descripcion}} </div>
+          </div>
+          <div class="modal-footer">
+            <div class="text-left">Precio ${{Producto.precio}}</div>
+            <button type="button" id="anadeProducto" class="btn btn-primary" data-bs-dismiss="modal">Agregar al carrito.</button>
+          </div>
+        </div>
+      </div>
+ </div>
  <!-- Fin Modal Producto -->
