@@ -1,17 +1,17 @@
-const modalEnviado = new bootstrap.Modal(document.getElementById('modalEnviado'));
-const modalEnviadoEl = document.getElementById('modalEnviado');
-modalEnviadoEl.addEventListener('hidden.bs.modal', event => {
-    window.location.replace("index.html");
-  });
+// const modalEnviado = new bootstrap.Modal(document.getElementById('modalEnviado'));
+// const modalEnviadoEl = document.getElementById('modalEnviado');
+// modalEnviadoEl.addEventListener('hidden.bs.modal', event => {
+//     window.location.replace("index.html");
+//   });
   
-function modalDisplay() {
-    console.log('Su mensaje ha sido enviado con cariño a /dev/null');
-    modalEnviado.show();
-    document.getElementById("formaContacto").reset(); //Por algún motivo, seleccionar esto por jQuery genera un error.
-}
+// function modalDisplay() {
+//     console.log('Su mensaje ha sido enviado con cariño a /dev/null');
+//     modalEnviado.show();
+//     document.getElementById("formaContacto").reset(); //Por algún motivo, seleccionar esto por jQuery genera un error.
+// }
 
 
-var validator = $('#formaContacto').validate({
+$('#formaContacto').validate({
     rules: {
         nombre: {
             required: true,
@@ -40,7 +40,7 @@ var validator = $('#formaContacto').validate({
         agree: "* Debe aceptar nuestros términos y condiciones."
     },   
     submitHandler: function(form) {
-       modalDisplay();
+        document.getElementById("formaContacto").reset();
       }
     
 }

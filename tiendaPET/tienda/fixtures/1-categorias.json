@@ -2,12 +2,12 @@
 	"model": "tienda.categorias",
 	"pk": 1,
 	"fields": {
-		"nombre": "correa"
+		"nombre": "Correa"
 	}
 }, {
 	"model": "tienda.categorias",
 	"pk": 2,
 	"fields": {
-		"nombre": "bandana"
+		"nombre": "Bandana"
 	}
 }]

@@ -2,12 +2,12 @@
 	"model": "tienda.mascotas",
 	"pk": 1,
 	"fields": {
-		"especie": "gato"
+		"especie": "Gato"
 	}
 }, {
 	"model": "tienda.mascotas",
 	"pk": 2,
 	"fields": {
-		"especie": "gato"
+		"especie": "Perro"
 	}
 }]

@@ -37,53 +37,40 @@
   </head>
   <body class="d-flex flex-column min-vh-100">
     <!-- Cuerpo -->
-    {% comment %} {% include 'components/modals/modalBusqueda.html' %}
+    {% include 'components/modals/modalBusqueda.html' %}
     {% include 'components/modals/modalCarrito.html' %}
-    {% include 'components/modals/modalProducto.html' %} {% endcomment %}
+    {% include 'components/modals/modalProducto.html' %}
     {% include  'components/navbar.html' %}
     <!-- Inicio contenedor -->
     <div class="container">
-      {% include 'components/cartButton.html' with carrito_numero=cart_cantidad%}
+      <!--indicador de carrito de compra-->
+      {% include 'components/cartButton.html' with carrito_numero=cart_cantidad %}
       <!-- Inicio de la columna de Boostrap -->
       <div class="col-6" style="background-color:white; padding-bottom:8rem;">
         <!-- Inicio del campo Forma -->
         <form id="formaContacto" method="POST">
+          {% csrf_token %}
+          
           <h1>Contacto</h1>
           <h4>Datos Personales:</h4>
           <div class="mb-3">
-            <label for="Nombre" class="form-label">Nombre completo</label>
-            <input type="name" class="form-control" name="nombre" id="nombre">
+          {{ form.nombre.label_tag }}
           </div>
-          <div class="mb-3">
-            <label for="correo" class="form-label">Correo Electrónico</label>
-            <input type="email" class="form-control" id="email" name="email">
-            <div id="emailHelp" class="form-text">(Nunca compartiremos su correo electrónico sin su autorización)</div>
+          <div class="mb-3">          
+          {{ form.nombre }}
           </div>
-          <div class="mb-3">
-            <label for="razon" class="form-label">Motivo de contacto</label>
-            <select class="form-select required" aria-label="Default select example" id="razon" name="razon">
-              <option selected value="">Seleccione un motivo</option>
-              <option value="1">Duda</option>
-              <option value="2">Sugerencia</option>
-              <option value="3">Reclamo</option>
-              <option value="4">Felicitación</option>
-            </select>
-          </div>
-          <div class="form-group mb-3 mt-4">
-            <h4>Su mensaje:</h4>
-            <textarea class="form-control required" id="comentario" rows="8" cols="7" maxlength="700" name="comentario"></textarea>
-            <div id="comentarioHelp" class="form-text">Mínimo 50 carácteres. Máximo 700 carácteres.</div>
-          </div>
-          <div class="mb-3">
-            <div class="checkbox">
-              <label>
-                <input type="checkbox" id="agree" name="agree" value="agree"> He leído y acepto los <a href="#">términos y condiciones.</a>
-              </label>
-              <label for="agree" generated="true" class="error" id="agree-error"></label>
-            </div>
-          </div>
+          {{ form.email.label_tag }}
+          {{ form.email }}
+          
+          <div id="emailHelp" class="form-text">(Nunca compartiremos su correo electrónico sin su autorización)</div>
+          {{ form.razon.label_tag }}
+          {{ form.razon }}
+          {{ form.comentario.label_tag }}
+          {{ form.comentario }}
+          <div id="comentarioHelp" class="form-text">Mínimo 50 caracteres. Máximo 700 caracteres.</div>
+          {{ form.agree }}
           <div>
-            <input type="submit" class="btn btn-success btn-lg" value="Envíar" id="botonEnviar" value="Envíar">
+            <input type="submit" class="btn btn-success btn-lg" value="Enviar" id="botonEnviar">
           </div>
         </form>
       </div>
@@ -95,6 +82,5 @@
     <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" integrity="sha384-aEDtD4n2FLrMdE9psop0SHdNyy/W9cBjH22rSRp+3wPHd62Y32uijc0H2eLmgaSn" 
     crossorigin="anonymous"></script>
     <script src="{% static 'tienda/js/app.js' %}"></script>
-    <script src="{% static 'tienda/js/validate.js' %}"></script>
   </body>
 </html>

@@ -26,6 +26,7 @@ class Productos(models.Model):
     nombre=models.CharField(blank=False, max_length=100, null=False)
     precio=models.IntegerField(blank=False, null=False)
     imagen=models.CharField(blank=False,max_length=255, null=False)
+    #imagen=models.ImageField(upload_to='img') //para posterior desarrollo
     mascota=models.ForeignKey('Mascotas', on_delete=models.CASCADE)
     stock=models.IntegerField(blank=False)
     categoria=models.ForeignKey('Categorias', on_delete=models.CASCADE)

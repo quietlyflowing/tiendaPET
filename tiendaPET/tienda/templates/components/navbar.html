@@ -1,6 +1,6 @@
 {% load static %}  
   <!-- Inicio Navbar -->
-    <nav class="navbar navbar-expand-md navbar-dark" id="tiendaNav" style="background-color: #546c1b">
+    <nav class="navbar navbar-expand-md navbar-dark" id="tiendaNav" style="background-color: #546c1b;">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -24,12 +24,21 @@
               <li class="nav-item">
                 <a class="nav-link active" href="/contacto">Contacto</a>
               </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="/donar"><b>Donar</b></a>
+              </li>
             </ul>
           </div>
         </div>
-        <form role="search">
+      {% comment %} Se muere esto hasta que tenga tiempo para implementar un R más inteligente. Además, nunca estuvo en los requerimientos. {% endcomment %}
+        {% comment %} <form role="search">
           <input class="form-control" data-bs-toggle="modal" data-bs-target="#modalBusqueda" type="search" id="busqueda" placeholder="Búsqueda" aria-label="Búsqueda">
-        </form>
+        </form> {% endcomment %}
+        <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" href="/login">Iniciar Sesión</a>
+        </li>
+      </ul>
       </div>
     </nav>
     <!--fin navbar-->

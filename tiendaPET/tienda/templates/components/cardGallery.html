@@ -1,7 +1,7 @@
 {% load static %}
 
 <!--Card-->
-<div class="col-md-6 col-lg-4">
+<div class="col-md-6 col-lg-4" id="cardGallery{{id_producto}}">
     <div class="card h-100" id="{{ id_producto }}">
       <img src="{% static imagen_producto %}" class="card-image-top" alt="{{ nombre_producto }}"></img>
       <div class="card-body" style="background-color: #546c1b">

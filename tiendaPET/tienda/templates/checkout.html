@@ -1,0 +1,186 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <title>Pago - TiendaPET</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TiendaPET</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous" referrerpolicy="no-referrer" />
+      <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" 
+      integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+      <link rel="icon" href="favicon.png"/>
+  <style>
+    .container {
+        max-width: 1200px; /* Set max width */
+        margin: 0 auto; /* Center container horizontally */
+        padding: 0 20px; /* Add some padding */
+      }
+
+      /* Media query for small screens */
+      @media only screen and (max-width: 767px) {
+        .container {
+          width: 100%; /* Set width to 100% */
+          padding: 0; /* Remove padding */
+        }
+      }
+      .error{
+        color: #dc3545;
+        margin-top: .5rem;
+      }
+      #region {
+        color:black;
+      }
+  </style>
+</head>
+
+<body>
+
+{% include 'components/navbar.html' %}
+  
+<div class="container" style="padding-top: 2rem; padding-bottom: 5rem">
+    <div class="row">
+      <div class="col-6" style="background-color:#ebeff0;">
+        <div class="container mt-3">
+          <h2>Datos Personales</h2>
+          <form id="formaCheckout" method="POST">
+            <div class="mb-3 mt-3">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="name" minlength='3' maxlength='20' class="form-control" id="nombre" name="nombre"
+                pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ\s]+" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Correo Electrónico</label>
+              <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" name="email"
+                required>
+            </div>
+            <div class="mb-3">
+              <label for="direccion">Dirección</label>
+              <input type="text" class="form-control" id="direccion" name="direccion"
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$" required>
+            </div>
+            <div class="mb-3">
+              <input type="text" class="form-control" id="domicilio"
+                placeholder="Apartamento, casa, puerta, etc. (opcional)" name="domicilio" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$">
+            </div>
+            <div class="mb-3">
+              <label for="ciudad">Ciudad</label>
+              <input type="text" class="form-control" id="ciudad" name="ciudad" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ\s]+"
+                required>
+            </div>
+
+            <label for="region" class="form-label">
+              <p>Región</p>
+            </label>
+
+            <select class="form-select required" id="region" name="region" required>
+              <option value="" selected>Seleccionar Región</option>
+              <option value="1">Aisén</option>
+              <option value="2">Antofagasta</option>
+              <option value="3">Araucanía</option>
+              <option value="4">Arica y Parinacota</option>
+              <option value="5">Atacama</option>
+              <option value="6">Biobío</option>
+              <option value="7">Coquimbo</option>
+              <option value="8">Los Lagos</option>
+              <option value="9">Los Ríos</option>
+              <option value="10">Magallanes</option>
+              <option value="11">Maule</option>
+              <option value="12">Metropolitana</option>
+              <option value="13">Ñuble</option>
+            </select>
+            <label for="region" generated="true" class="error" id="region-error"></label>
+            <hr class="solid">
+
+            <div class="container mt-3" >
+              <h2>Pago</h2>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" required>
+              <label class="form-check-label" for="radio1">Crédito</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+              <label class="form-check-label" for="radio2">Débito</label>
+            </div>
+            <div class="form-check">
+              <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">
+              <label class="form-check-label">Paypal</label>
+            </div>
+            <label for="optradio" generated="true" class="error" id="optradio-error"></label>
+
+            <div class="mb-3 mt-3">
+              <label for="titular">Titular de la tarjeta</label>
+              <input type="text" class="form-control" id="titular" name="titular" pattern="^[a-zA-ZÀ-ÖØ-öø-ÿ\s.'-]{1,40}$" required>
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="numero">Número de la tarjeta</label>
+              <input type="text" class="form-control" id="numero" name="numero"  pattern="[0-9]{4}?[0-9]{4}?[0-9]{4}?[0-9]{4}" minlength='16'
+              maxlength='19' required>
+            </div>
+            <div class="mb-3 mt-3">
+              <label for="codigo">Código de seguridad</label>
+              <input type="text" class="form-control" id="codigo" placeholder="CVV" name="codigo" minlength='3'
+                maxlength='3' pattern="^[0-9]{3}$" required>
+            </div>
+
+            <div class="mb-3 mt-3">
+              <label for="fecha">Fecha de caducidad</label>
+              <input type="month"  class="form-control" id="fecha" min="2024-01" max="2035-12" placeholder="MM/AA" name="fecha"
+               required>
+            </div>
+            <input type="submit" class="btn btn-primary" value="Pagar" id="botonPagar">
+            <br> <br>
+          </div>
+          </form>
+        </div>
+      </div>
+
+    
+        <div class="col">
+          <h2>Carro</h2>
+        <div class="container mt-3">
+          <table class="table">
+            <thead>
+              <tr>
+                <th scope="col"><i class="fa-regular fa-image"></i></th>
+                <th scope="col">Producto</th>
+                <th scope="col">Precio</th>
+                <th scope="col">Cantidad</th>
+                <th scope="col">Total</th>
+              </tr>
+              <tbody id="tablaCheckout">
+                {% for detalle in Detalles %}
+                <article id={{detalle.producto.id}}>
+                 <tr>
+                  <th scope = "row"><img src="{% static detalle.producto.imagen %}" class="img-thumbnail"></img></th>
+                  <td>{{detalle.producto.nombre}}</td>
+                  <td>${{detalle.producto.precio}}</td>
+                  <td><p>{{detalle.cantidad}}</p></td>
+                  <td><p>${{detalle.precioTotal}}</p> </td>
+                </tr> 
+              </article>
+                {% endfor %} 
+              </tbody>
+              </thead>
+          </table>
+          <div>
+            <h4><b>Total a pagar:</b> ${{Carrito.valorTotal}}</h4>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{% include 'components/footer.html' %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" integrity="sha384-aEDtD4n2FLrMdE9psop0SHdNyy/W9cBjH22rSRp+3wPHd62Y32uijc0H2eLmgaSn" crossorigin="anonymous"></script>
+  <script src="{% static 'tienda/js/checkoutValidate.js' %}"></script>
+  <script src="{% static 'tienda/js/app.js' %}"></script>  
+</body>
+
+</html>

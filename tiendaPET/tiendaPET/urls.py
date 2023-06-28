@@ -26,7 +26,9 @@ urlpatterns = [
     path('gatos/', views.cats),
     path('perros/', views.dogs),
     path('contacto/', views.contact),
-    #Paths que implementan API
+    path('donar/', views.donar),
+    path('checkout/', views.checkout),
+    #Paths que implementan API/AJAX
     path('api/addItem', views.addToCarritoAction),
     path('api/removeAllTheSameItems/<int:carrito_id>/<int:producto_id>/', views.removeSameRowAction),
     path('api/updateItems', views.updateCartAction),
@@ -34,6 +36,13 @@ urlpatterns = [
     path('api/getModalCart/', views.modalCarro),
     path('api/getModalProducto/<int:id>', views.modalProducto),
     path('api/cartButtonUpdate', views.reloadCartButtton), 
-    path('api/deleteEntireCart/<int:carrito_id>', views.deleteAllCart)
+    path('api/deleteEntireCart/<int:carrito_id>', views.deleteAllCart),
+    path('api/removeProduct/<int:producto_id>', views.removeProduct),
+    path('api/addProduct', views.addProduct),
+    path('api/getModalCUD', views.modalCUD),
+    path('api/getModalUpdate/<int:producto_id>', views.modalUpdate),
+    path('api/updateProduct/<int:producto_id>', views.updateProduct),
+    path('api/getModalConfirm', views.modalConfirmaBorradoProducto),
+    path('api/getCartStats', views.cartStats)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

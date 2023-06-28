@@ -1,41 +1,92 @@
-<div class="modal fade" id="modalCUD" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+{% load static %}
+<div class="modal fade" id="modalCUD" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <h1 class="modal-title fs-5" id="exampleModalLabel">Editar artículo</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
-        <img src="https://media.istockphoto.com/id/1455584807/es/foto/maniqu%C3%AD-con-traje-a-medida-en-taller-de-lujo.webp?s=2048x2048&w=is&k=20&c=TfJAru6CAtokqYHWXPT9pWTyJt2ihnmbPExYVG4bn04=" class="img-thumbnail" alt="...">
-        <form action="" method="POST" enctype="multipart/form-data">
-          <!--     {% csrf_token %}
- -->
+        {% if not Producto %}
+        <img src="{% static 'tienda/img/placeholder.webp' %}" class="img-thumbnail" alt="Vista Previa" id="imagePreview">
+        {% else %}
+        <img src="{% static Producto.imagen %}" class="img-thumbnail" alt="Vista Previa" id="imagePreview">
+        {% endif %}
+        <form  id="uploadForm" method="post" enctype="multipart/form-data">
+          <!--     {% csrf_token %}-->
           <label for="nombre" class="form-label">Nombre del artículo</label>
+          {%if not Producto %}
           <input type="text" id="nombre" class="form-control" name="nombre" required maxlength="255">
+          {% else %}
+          <input type="text" id="nombre" class="form-control" name="nombre" required maxlength="255" value="{{Producto.nombre}}">
+          {% endif %}
           <label for="precio" class="form-label">Precio</label>
+          {%if not Producto %}
           <input type="number" id="precio" name="precio" class="form-control" required>
+          {% else %}
+          <input type="number" id="precio" name="precio" class="form-control" value="{{Producto.precio}}"required>
+          {% endif %}
+          
+          <label for="descripcion" class="form-label">Descripcion del artículo</label>
+            {%if not Producto%}
+            <input type="text" id="descripcion" class="form-control" name="descripcion" required maxlength="255">
+            {% else %}
+            <input type="text" id="descripcion" class="form-control" name="descripcion" required maxlength="255" value="{{Producto.descripcion}}">
+            {% endif %}
+          
+          
           <div class="mb-3">
             <label for="formFile" class="form-label">Subir Imagen</label>
-            <input class="form-control" type="file" id="imagen">
+            <input class="form-control" type="file" accept="image/*" id="imageUpload" name="imageUpload">
           </div>
-          <label for="stockInicial" class="form-label">Stock Inicial</label>
-          <input type="number" id="Stock" name="stockInicial" class="form-control" required>
+
+
+          {% if Producto %}
+
+          <label for="stockInicial" class="form-label">Stock</label>
+          <input type="number" id="Stock" name="stock" class="form-control" min="1" max="999" value="{{Producto.stock}}" required>
+          {% else %}
+          <label for="stock" class="form-label">Stock Inicial</label>
+          <input type="number" id="Stock" name="stock" class="form-control" min="1" max="999" value="1" required>
+          {% endif %}
           <label for="mascota" class="form-label">Mascota</label>
           <select class="form-select" name="mascota">
+            {%if not Producto %}
             <option selected>Mascota...</option>
-            <option value="1">Perro</option>
-            <option value="2">Gato</option>
+            {% for mascota in Mascotas %}
+             <option value="{{mascota.id}}">{{mascota.especie}}</option>
+            {% endfor %}
+            {% else %}
+            <option selected value={{Producto.mascota.id}}>{{Producto.mascota.especie}}</option>
+            {% for mascota in Mascotas %}
+            {% if mascota.especie != Producto.mascota.especie %}
+            <option value="{{mascota.id}}">{{mascota.especie}}</option>
+            {% endif %}
+            {% endfor %}
+            {% endif %} 
+            
           </select>
           <label for="categoria" class="form-label">Categoria</label>
+          {%if not Producto %}
           <select class="form-select" name="categoria"> 
             <option selected>Seleccione:</option>
-            <option value="1">Correa</option>
-            <option value="2">Bandana</option>
+            {% for categoria in Categorias %}
+            <option value="{{forloop.counter}}">{{categoria.nombre}}</option>
+            {% endfor %}
+            {% else %}
+            <select class="form-select" name="categoria"> 
+              <option selected value="{{Producto.categoria.id}}">{{Producto.categoria.nombre}}</option>
+              {% for categoria in Categorias %}
+              {% if categoria.nombre != Producto.categoria.nombre %}
+              <option value="{{categoria.id}}">{{categoria.nombre}}</option>
+              {% endif %}
+              {% endfor %}
+              {%endif%}
           </select>
         </form>
       </div>
       <div class="modal-footer">
-        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Guardar Artículo</button>
+        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Descartar Cambios</button>
+        <button type="button" id="botonSubirProducto" class="btn btn-primary" data-bs-dismiss="modal">Guardar Artículo</button>
       </div>
     </div>
   </div>
