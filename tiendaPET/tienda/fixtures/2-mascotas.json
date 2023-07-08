@@ -1,11 +1,11 @@
 [{
-	"model": "tienda.mascotas",
+	"model": "tienda.mascota",
 	"pk": 1,
 	"fields": {
 		"especie": "Gato"
 	}
 }, {
-	"model": "tienda.mascotas",
+	"model": "tienda.mascota",
 	"pk": 2,
 	"fields": {
 		"especie": "Perro"

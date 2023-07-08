@@ -1,6 +1,6 @@
 [
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 1,
     "fields": {
       "nombre": "Tarapacá",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 2,
     "fields": {
       "nombre": "Antofagasta",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 3,
     "fields": {
       "nombre": "Atacama",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 4,
     "fields": {
       "nombre": "Coquimbo",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 5,
     "fields": {
       "nombre": "Valparaíso",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 6,
     "fields": {
       "nombre": "Libertador General Bernardo O'Higgins",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 7,
     "fields": {
       "nombre": "Maule",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 8,
     "fields": {
       "nombre": "Biobío",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 9,
     "fields": {
       "nombre": "La Araucanía",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 10,
     "fields": {
       "nombre": "Los Lagos",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 11,
     "fields": {
       "nombre": "Aysén del General Carlos Ibáñez del Campo",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 12,
     "fields": {
       "nombre": "Magallanes y de la Antártica Chilena",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 13,
     "fields": {
       "nombre": "Metropolitana de Santiago",
@@ -104,7 +104,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 14,
     "fields": {
       "nombre": "Los Ríos",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 15,
     "fields": {
       "nombre": "Arica y Parinacota",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "model": "tienda.regiones",
+    "model": "tienda.region",
     "pk": 16,
     "fields": {
       "nombre": "Ñuble",

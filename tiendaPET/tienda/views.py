@@ -2,28 +2,43 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template import loader
 from django.utils.html import mark_safe
-from .models import Productos, DetalleCarrito, Carrito, Mascotas, Categorias
+from .models import Producto, DetalleCarrito, Carrito, Mascota, Categoria
 from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
 from django.core.exceptions import ObjectDoesNotExist
 from django.core import serializers
 from django.template.loader import render_to_string
-from .forms import DonarForm, ContactoForm
+from .forms import DonarForm, ContactoForm, AutenticacionForm
 from django.core.files.storage import FileSystemStorage
 from django.conf import settings
 import os
 from django.core.files.storage import default_storage
 from django.core.files.base import ContentFile
 from django.shortcuts import get_object_or_404, redirect
+from django.contrib.auth import authenticate 
+from django.contrib.auth import login as auth_login
+
+
 # Create your views here.
+
+def login(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        password = request.POST['password']
+        user = authenticate(request, email=email, password=password)
+        if user is not None:
+            auth_login(request, user)
+            return JsonResponse({'status':'success'}, status=200)
+        else:
+            return JsonResponse({'status':'invalid'}, status=400)
 
 def index(request):
     detalles = DetalleCarrito.objects.all().select_related('producto') #hardcodeado por ahora para mostrar todos los carros
     cartQty = 0
     for d in detalles:
         cartQty+= d.cantidad
-    products = Productos.objects.order_by('-conteoVistas')[:6]
+    products = Producto.objects.order_by('-conteoVistas')[:6]
     context = {"cart_cantidad": cartQty,"jumbotron_titulo": "Somos TiendaPET", "jumbotron_subtitulo": "Tenemos los mejores productos para tu mascota", "jumbotron_fondo": 'tienda/img/boxer.jpg', "jumbotron_opt": mark_safe('<button class="btn btn-primary btn-lg" type="button" data-bs-toggle="modal" data-bs-target="#modalNosotros">Sobre Nosotros</button>')}
     for i in range(6):
         context['producto{}_id'.format(i+1)] = products[i].id
@@ -34,7 +49,7 @@ def index(request):
     return HttpResponse(template.render(context,request))
 
 def cats(request):
-    products = Productos.objects.filter(mascota=1)
+    products = Producto.objects.filter(mascota=1)
     detalles = DetalleCarrito.objects.all().select_related('producto') #hardcodeado por ahora para mostrar todos los carros
     cartQty = 0
     for d in detalles:
@@ -44,7 +59,7 @@ def cats(request):
     return HttpResponse(template.render(context, request))
 
 def dogs(request):
-    products = Productos.objects.filter(mascota=2)
+    products = Producto.objects.filter(mascota=2)
     detalles = DetalleCarrito.objects.all().select_related('producto')
     cartQty = 0
     for d in detalles:
@@ -52,14 +67,6 @@ def dogs(request):
     template = loader.get_template("gallery.html")
     context = {"cart_cantidad": cartQty, "Productos": products, "titulo_galeria": "Perros", "jumbotron_titulo": "Productos para Perros", "jumbotron_subtitulo": "¡Todo para el mejor amigo del hombre!", "jumbotron_fondo": 'tienda/img/terrier.jpg'}
     return HttpResponse(template.render(context, request))
-# def contact(request):
-#     detalles = DetalleCarrito.objects.all().select_related('producto')
-#     cartQty = 0
-#     for d in detalles:
-#         cartQty+= d.cantidad
-#     template = loader.get_template("contacto.html")
-#     context = {"cart_cantidad": cartQty}
-#     return HttpResponse(template.render(context, request))
 
 def checkout(request):
     carrito = get_object_or_404(Carrito, pk=1) #hardcodeado por mientras
@@ -72,7 +79,7 @@ def checkout(request):
         return redirect('/')
 @csrf_exempt
 def contact(request):
-    products = Productos.objects.filter(mascota=2)
+    products = Producto.objects.filter(mascota=2)
     detalles = DetalleCarrito.objects.all().select_related('producto')
     cartQty = 0
     for d in detalles:
@@ -82,14 +89,14 @@ def contact(request):
 
 @csrf_exempt
 def contactInForm(request):
-    products = Productos.objects.filter(mascota=2)
+    products = Producto.objects.filter(mascota=2)
     detalles = DetalleCarrito.objects.all().select_related('producto')
     cartQty = 0
     for d in detalles:
         cartQty+= d.cantidad
     form = ContactoForm()
     context = {'form': form, "cart_cantidad": cartQty}
-    return render(request, 'contactoStatic.html', context)
+    return render(request, 'contacto.html', context)
 
 def addProductToCart(producto, carrito, cantidad):
     detalle, created = DetalleCarrito.objects.get_or_create(producto=producto, carrito=carrito, defaults={'cantidad': 0, 'precioTotal': 0})
@@ -109,7 +116,7 @@ def addToCarritoAction(request):
         cantidad = int(data.get('cantidad', 1))
 
         try:
-            producto = Productos.objects.get(pk=producto_id)
+            producto = Producto.objects.get(pk=producto_id)
             if cliente_id == 0:
                 carrito, created = Carrito.objects.get_or_create(pk=carrito_id, defaults={'valorTotal': 0})
             else:
@@ -117,7 +124,7 @@ def addToCarritoAction(request):
                 carrito, created = Carrito.objects.get_or_create(cliente=cliente, defaults={'valorTotal': 0})
             addProductToCart(producto, carrito, cantidad)
             return JsonResponse({'status': 'Producto añadido'}, status=200)
-        except Productos.DoesNotExist:
+        except Producto.DoesNotExist:
             return JsonResponse({'status': 'failure', 'error': 'Producto no existe'}, status=400)
         except Carrito.DoesNotExist:
             return JsonResponse({'status': 'failure', 'error': 'Carrito no existe'}, status=400)
@@ -131,14 +138,14 @@ def removeSameRowAction(request, carrito_id, producto_id): #borra los mismos tip
     if request.method == 'GET':
         try:
             carrito = Carrito.objects.get(pk=carrito_id)
-            producto = Productos.objects.get(pk=producto_id)
+            producto = Producto.objects.get(pk=producto_id)
             detalle_carrito = DetalleCarrito.objects.get(carrito=carrito, producto=producto)
             detalle_carrito.delete()
 
             return JsonResponse({'status': 'success', 'message': 'Productos removidos del carrito'})
         except Carrito.DoesNotExist:
             return JsonResponse({'status': 'failure', 'error': 'El carrito no existe'}, status=400)
-        except Productos.DoesNotExist:
+        except Producto.DoesNotExist:
             return JsonResponse({'status': 'failure', 'error': 'El producto no existe'}, status=400)
         except DetalleCarrito.DoesNotExist:
             return JsonResponse({'status': 'failure', 'error': 'El producto no está en el carro'}, status=400)
@@ -158,7 +165,7 @@ def updateCartAction(request):
 
         try:
             # Find the product and cart
-            producto = Productos.objects.get(pk=producto_id)
+            producto = Producto.objects.get(pk=producto_id)
             carrito = Carrito.objects.get(pk=carrito_id)
 
             # Get the detail cart record
@@ -232,19 +239,23 @@ def deleteAllCart(request, carrito_id):
     else:
         return JsonResponse({'status': 'failure', 'error': 'Petición HTTP inválida'}, status=405)
 def modalCarro(request):
-    carrito = Carrito.objects.get(pk=1) #hardcodeado por ahora
-    detalles = DetalleCarrito.objects.all().select_related('producto')
+    try:
+        carrito = Carrito.objects.get(pk=1) #hardcodeado por ahora
+        detalles = DetalleCarrito.objects.all().select_related('producto')
+    except:
+        carrito = None
+        detalles = None
     context = {"Detalles": detalles, "Carrito": carrito}
     return render(request, "components/modals/modalCarrito.html", context)
 
 def modalProducto(request, id):
-    producto = Productos.objects.get(pk=id)
+    producto = Producto.objects.get(pk=id)
     context = {"Producto": producto}
     return render(request, "components/modals/modalProducto.html", context)
 
 def modalCUD(request):
-    mascotas = Mascotas.objects.values()
-    categorias = Categorias.objects.values()
+    mascotas = Mascota.objects.values()
+    categorias = Categoria.objects.values()
     context = {"Mascotas": mascotas, "Categorias": categorias}
     return render(request, "components/modals/modalCUD.html", context)
 
@@ -277,9 +288,9 @@ def addProduct(request):
         uploaded_file_url = default_storage.url(file)
         uploaded_file_url = uploaded_file_url.replace('/static/', '', 1)
         try:
-            mascota = Mascotas.objects.get(pk=idMascota)
-            categoria = Categorias.objects.get(pk=idCategoria)
-            Productos.objects.create(nombre=nombre, precio=precio, stock=stock, imagen=uploaded_file_url, mascota=mascota, categoria=categoria)
+            mascota = Mascota.objects.get(pk=idMascota)
+            categoria = Categoria.objects.get(pk=idCategoria)
+            Producto.objects.create(nombre=nombre, precio=precio, stock=stock, imagen=uploaded_file_url, mascota=mascota, categoria=categoria)
             return JsonResponse({'status': 'sucess', 'message': 'Producto creado correctamente.'})
         except Exception as e:
             return JsonResponse({'status': 'failure', 'error': str(e)}, status=500)
@@ -290,7 +301,7 @@ def addProduct(request):
 def removeProduct(request, producto_id):
     if request.method == 'GET':
         try:
-            producto = Productos.objects.get(pk=producto_id)
+            producto = Producto.objects.get(pk=producto_id)
             producto.delete()
             return JsonResponse({'status': 'success'}, status=200)
         except Carrito.DoesNotExist:
@@ -331,12 +342,16 @@ def modalConfirmaBorradoProducto(request):
     context = {}
     return render(request, "components/modals/modalConfirm.html", context)
 
+def modalLogin(request):
+    context = {}
+    return render(request, 'components/modals/modalLogin.html')
+
 def modalUpdate(request, producto_id):
-    producto = Productos.objects.get(pk=producto_id)
+    producto = Producto.objects.get(pk=producto_id)
     mascota = producto.mascota
     categoria = producto.categoria
-    mascotas = Mascotas.objects.all()
-    categorias = Categorias.objects.all()
+    mascotas = Mascota.objects.all()
+    categorias = Categoria.objects.all()
     context = {"Producto":producto, "Mascotas": mascotas, "Categorias": categorias}
     return render(request, "components/modals/modalCUD.html", context)
 @csrf_exempt
@@ -360,9 +375,9 @@ def updateProduct(request, producto_id):
         else: 
             imagen = None
 
-        productoUpdate = Productos.objects.get(pk=producto_id)
-        mascotaUpdate = Mascotas.objects.get(pk=idMascota)
-        categoriaUpdate= Categorias.objects.get(pk=idCategoria)
+        productoUpdate = Producto.objects.get(pk=producto_id)
+        mascotaUpdate = Mascota.objects.get(pk=idMascota)
+        categoriaUpdate= Categoria.objects.get(pk=idCategoria)
         try:
             productoUpdate.nombre = nombre
             productoUpdate.precio = precio

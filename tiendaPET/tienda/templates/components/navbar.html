@@ -1,5 +1,6 @@
 {% load static %}  
   <!-- Inicio Navbar -->
+
     <nav class="navbar navbar-expand-md navbar-dark" id="tiendaNav" style="background-color: #546c1b;">
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
@@ -16,16 +17,16 @@
           <div class="offcanvas-body" style="background-color: #546c1b">
             <ul class="navbar-nav me-auto">
               <li class="nav-item">
-                <a class="nav-link active" href="/perros">Productos para Perros</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'perros' %} active {% endif %}" href="/perros">Productos para Perros</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/gatos">Productos para Gatos</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'gatos' %} active {% endif %}" href="/gatos">Productos para Gatos</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/contacto">Contacto</a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %}active{% endif %}" href="/contacto">Contacto</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link active" href="/donar"><b>Donar</b></a>
+                <a class="nav-link {% if request.resolver_match.url_name == 'donar'%}active {% endif %}" href="/donar"><b>Donar</b></a>
               </li>
             </ul>
           </div>
@@ -36,7 +37,7 @@
         </form> {% endcomment %}
         <ul class="navbar-nav me-auto">
         <li class="nav-item">
-          <a class="nav-link active" href="/login">Iniciar Sesión</a>
+          <a class="nav-link" id="loginLink" href="#">Iniciar Sesión</a>
         </li>
       </ul>
       </div>

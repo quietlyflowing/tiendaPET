@@ -1,5 +1,5 @@
 [{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 1,
 		"fields": {
 			"nombre": "Arica",
@@ -7,7 +7,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 2,
 		"fields": {
 			"nombre": "Camarones",
@@ -15,7 +15,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 3,
 		"fields": {
 			"nombre": "Putre",
@@ -23,7 +23,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 4,
 		"fields": {
 			"nombre": "General Lagos",
@@ -31,7 +31,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 5,
 		"fields": {
 			"nombre": "Iquique",
@@ -39,7 +39,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 6,
 		"fields": {
 			"nombre": "Camiña",
@@ -47,7 +47,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 7,
 		"fields": {
 			"nombre": "Colchane",
@@ -55,7 +55,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 8,
 		"fields": {
 			"nombre": "Huara",
@@ -63,7 +63,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 9,
 		"fields": {
 			"nombre": "Pica",
@@ -71,7 +71,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 10,
 		"fields": {
 			"nombre": "Pozo Almonte",
@@ -79,7 +79,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 11,
 		"fields": {
 			"nombre": "Alto Hospicio",
@@ -87,7 +87,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 12,
 		"fields": {
 			"nombre": "Antofagasta",
@@ -95,7 +95,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 13,
 		"fields": {
 			"nombre": "Mejillones",
@@ -103,7 +103,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 14,
 		"fields": {
 			"nombre": "Sierra Gorda",
@@ -111,7 +111,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 15,
 		"fields": {
 			"nombre": "Taltal",
@@ -119,7 +119,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 16,
 		"fields": {
 			"nombre": "Calama",
@@ -127,7 +127,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 17,
 		"fields": {
 			"nombre": "Ollagüe",
@@ -135,7 +135,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 18,
 		"fields": {
 			"nombre": "San Pedro de Atacama",
@@ -143,7 +143,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 19,
 		"fields": {
 			"nombre": "Tocopilla",
@@ -151,7 +151,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 20,
 		"fields": {
 			"nombre": "María Elena",
@@ -159,7 +159,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 21,
 		"fields": {
 			"nombre": "Copiapó",
@@ -167,7 +167,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 22,
 		"fields": {
 			"nombre": "Caldera",
@@ -175,7 +175,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 23,
 		"fields": {
 			"nombre": "Tierra Amarilla",
@@ -183,7 +183,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 24,
 		"fields": {
 			"nombre": "Chañaral",
@@ -191,7 +191,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 25,
 		"fields": {
 			"nombre": "Diego de Almagro",
@@ -199,7 +199,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 26,
 		"fields": {
 			"nombre": "Vallenar",
@@ -207,7 +207,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 27,
 		"fields": {
 			"nombre": "Alto del Carmen",
@@ -215,7 +215,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 28,
 		"fields": {
 			"nombre": "Freirina",
@@ -223,7 +223,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 29,
 		"fields": {
 			"nombre": "Huasco",
@@ -231,7 +231,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 30,
 		"fields": {
 			"nombre": "La Serena",
@@ -239,7 +239,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 31,
 		"fields": {
 			"nombre": "Coquimbo",
@@ -247,7 +247,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 32,
 		"fields": {
 			"nombre": "Andacollo",
@@ -255,7 +255,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 33,
 		"fields": {
 			"nombre": "La Higuera",
@@ -263,7 +263,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 34,
 		"fields": {
 			"nombre": "Paiguano",
@@ -271,7 +271,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 35,
 		"fields": {
 			"nombre": "Vicuña",
@@ -279,7 +279,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 36,
 		"fields": {
 			"nombre": "Illapel",
@@ -287,7 +287,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 37,
 		"fields": {
 			"nombre": "Canela",
@@ -295,7 +295,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 38,
 		"fields": {
 			"nombre": "Los Vilos",
@@ -303,7 +303,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 39,
 		"fields": {
 			"nombre": "Salamanca",
@@ -311,7 +311,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 40,
 		"fields": {
 			"nombre": "Ovalle",
@@ -319,7 +319,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 41,
 		"fields": {
 			"nombre": "Combarbalá",
@@ -327,7 +327,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 42,
 		"fields": {
 			"nombre": "Monte Patria",
@@ -335,7 +335,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 43,
 		"fields": {
 			"nombre": "Punitaqui",
@@ -343,7 +343,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 44,
 		"fields": {
 			"nombre": "Río Hurtado",
@@ -351,7 +351,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 45,
 		"fields": {
 			"nombre": "Valparaíso",
@@ -359,7 +359,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 46,
 		"fields": {
 			"nombre": "Casablanca",
@@ -367,7 +367,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 47,
 		"fields": {
 			"nombre": "Concón",
@@ -375,7 +375,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 48,
 		"fields": {
 			"nombre": "Juan Fernández",
@@ -383,7 +383,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 49,
 		"fields": {
 			"nombre": "Puchuncaví",
@@ -391,7 +391,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 50,
 		"fields": {
 			"nombre": "Quilpué",
@@ -399,7 +399,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 51,
 		"fields": {
 			"nombre": "Quintero",
@@ -407,7 +407,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 52,
 		"fields": {
 			"nombre": "Villa Alemana",
@@ -415,7 +415,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 53,
 		"fields": {
 			"nombre": "Viña del Mar",
@@ -423,7 +423,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 54,
 		"fields": {
 			"nombre": "Isla de Pascua",
@@ -431,7 +431,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 55,
 		"fields": {
 			"nombre": "Los Andes",
@@ -439,7 +439,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 56,
 		"fields": {
 			"nombre": "Calle Larga",
@@ -447,7 +447,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 57,
 		"fields": {
 			"nombre": "Rinconada",
@@ -455,7 +455,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 58,
 		"fields": {
 			"nombre": "San Esteban",
@@ -463,7 +463,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 59,
 		"fields": {
 			"nombre": "La Ligua",
@@ -471,7 +471,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 60,
 		"fields": {
 			"nombre": "Cabildo",
@@ -479,7 +479,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 61,
 		"fields": {
 			"nombre": "Papudo",
@@ -487,7 +487,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 62,
 		"fields": {
 			"nombre": "Petorca",
@@ -495,7 +495,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 63,
 		"fields": {
 			"nombre": "Zapallar",
@@ -503,7 +503,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 64,
 		"fields": {
 			"nombre": "Quillota",
@@ -511,7 +511,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 65,
 		"fields": {
 			"nombre": "Calera",
@@ -519,7 +519,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 66,
 		"fields": {
 			"nombre": "Hijuelas",
@@ -527,7 +527,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 67,
 		"fields": {
 			"nombre": "La Cruz",
@@ -535,7 +535,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 68,
 		"fields": {
 			"nombre": "Limache",
@@ -543,7 +543,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 69,
 		"fields": {
 			"nombre": "Nogales",
@@ -551,7 +551,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 70,
 		"fields": {
 			"nombre": "Olmué",
@@ -559,7 +559,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 71,
 		"fields": {
 			"nombre": "San Antonio",
@@ -567,7 +567,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 72,
 		"fields": {
 			"nombre": "Algarrobo",
@@ -575,7 +575,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 73,
 		"fields": {
 			"nombre": "Cartagena",
@@ -583,7 +583,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 74,
 		"fields": {
 			"nombre": "El Quisco",
@@ -591,7 +591,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 75,
 		"fields": {
 			"nombre": "El Tabo",
@@ -599,7 +599,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 76,
 		"fields": {
 			"nombre": "Santo Domingo",
@@ -607,7 +607,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 77,
 		"fields": {
 			"nombre": "San Felipe",
@@ -615,7 +615,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 78,
 		"fields": {
 			"nombre": "Catemu",
@@ -623,7 +623,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 79,
 		"fields": {
 			"nombre": "Llaillay",
@@ -631,7 +631,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 80,
 		"fields": {
 			"nombre": "Panquehue",
@@ -639,7 +639,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 81,
 		"fields": {
 			"nombre": "Putaendo",
@@ -647,7 +647,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 82,
 		"fields": {
 			"nombre": "Santa María",
@@ -655,7 +655,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 83,
 		"fields": {
 			"nombre": "Rancagua",
@@ -663,7 +663,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 84,
 		"fields": {
 			"nombre": "Codegua",
@@ -671,7 +671,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 85,
 		"fields": {
 			"nombre": "Coinco",
@@ -679,7 +679,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 86,
 		"fields": {
 			"nombre": "Coltauco",
@@ -687,7 +687,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 87,
 		"fields": {
 			"nombre": "Doñihue",
@@ -695,7 +695,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 88,
 		"fields": {
 			"nombre": "Graneros",
@@ -703,7 +703,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 89,
 		"fields": {
 			"nombre": "Las Cabras",
@@ -711,7 +711,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 90,
 		"fields": {
 			"nombre": "Machalí",
@@ -719,7 +719,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 91,
 		"fields": {
 			"nombre": "Malloa",
@@ -727,7 +727,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 92,
 		"fields": {
 			"nombre": "Mostazal",
@@ -735,7 +735,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 93,
 		"fields": {
 			"nombre": "Olivar",
@@ -743,7 +743,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 94,
 		"fields": {
 			"nombre": "Peumo",
@@ -751,7 +751,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 95,
 		"fields": {
 			"nombre": "Pichidegua",
@@ -759,7 +759,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 96,
 		"fields": {
 			"nombre": "Quinta de Tilcoco",
@@ -767,7 +767,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 97,
 		"fields": {
 			"nombre": "Rengo",
@@ -775,7 +775,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 98,
 		"fields": {
 			"nombre": "Requínoa",
@@ -783,7 +783,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 99,
 		"fields": {
 			"nombre": "San Vicente",
@@ -791,7 +791,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 100,
 		"fields": {
 			"nombre": "Pichilemu",
@@ -799,7 +799,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 101,
 		"fields": {
 			"nombre": "La Estrella",
@@ -807,7 +807,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 102,
 		"fields": {
 			"nombre": "Litueche",
@@ -815,7 +815,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 103,
 		"fields": {
 			"nombre": "Marchihue",
@@ -823,7 +823,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 104,
 		"fields": {
 			"nombre": "Navidad",
@@ -831,7 +831,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 105,
 		"fields": {
 			"nombre": "Paredones",
@@ -839,7 +839,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 106,
 		"fields": {
 			"nombre": "San Fernando",
@@ -847,7 +847,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 107,
 		"fields": {
 			"nombre": "Chépica",
@@ -855,7 +855,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 108,
 		"fields": {
 			"nombre": "Chimbarongo",
@@ -863,7 +863,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 109,
 		"fields": {
 			"nombre": "Lolol",
@@ -871,7 +871,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 110,
 		"fields": {
 			"nombre": "Nancagua",
@@ -879,7 +879,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 111,
 		"fields": {
 			"nombre": "Palmilla",
@@ -887,7 +887,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 112,
 		"fields": {
 			"nombre": "Peralillo",
@@ -895,7 +895,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 113,
 		"fields": {
 			"nombre": "Placilla",
@@ -903,7 +903,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 114,
 		"fields": {
 			"nombre": "Pumanque",
@@ -911,7 +911,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 115,
 		"fields": {
 			"nombre": "Santa Cruz",
@@ -919,7 +919,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 116,
 		"fields": {
 			"nombre": "Talca",
@@ -927,7 +927,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 117,
 		"fields": {
 			"nombre": "Constitución",
@@ -935,7 +935,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 118,
 		"fields": {
 			"nombre": "Curepto",
@@ -943,7 +943,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 119,
 		"fields": {
 			"nombre": "Empedrado",
@@ -951,7 +951,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 120,
 		"fields": {
 			"nombre": "Maule",
@@ -959,7 +959,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 121,
 		"fields": {
 			"nombre": "Pelarco",
@@ -967,7 +967,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 122,
 		"fields": {
 			"nombre": "Pencahue",
@@ -975,7 +975,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 123,
 		"fields": {
 			"nombre": "Río Claro",
@@ -983,7 +983,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 124,
 		"fields": {
 			"nombre": "San Clemente",
@@ -991,7 +991,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 125,
 		"fields": {
 			"nombre": "San Rafael",
@@ -999,7 +999,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 126,
 		"fields": {
 			"nombre": "Cauquenes",
@@ -1007,7 +1007,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 127,
 		"fields": {
 			"nombre": "Chanco",
@@ -1015,7 +1015,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 128,
 		"fields": {
 			"nombre": "Pelluhue",
@@ -1023,7 +1023,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 129,
 		"fields": {
 			"nombre": "Curicó",
@@ -1031,7 +1031,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 130,
 		"fields": {
 			"nombre": "Hualañé",
@@ -1039,7 +1039,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 131,
 		"fields": {
 			"nombre": "Licantén",
@@ -1047,7 +1047,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 132,
 		"fields": {
 			"nombre": "Molina",
@@ -1055,7 +1055,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 133,
 		"fields": {
 			"nombre": "Rauco",
@@ -1063,7 +1063,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 134,
 		"fields": {
 			"nombre": "Romeral",
@@ -1071,7 +1071,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 135,
 		"fields": {
 			"nombre": "Sagrada Familia",
@@ -1079,7 +1079,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 136,
 		"fields": {
 			"nombre": "Teno",
@@ -1087,7 +1087,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 137,
 		"fields": {
 			"nombre": "Vichuquén",
@@ -1095,7 +1095,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 138,
 		"fields": {
 			"nombre": "Linares",
@@ -1103,7 +1103,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 139,
 		"fields": {
 			"nombre": "Colbún",
@@ -1111,7 +1111,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 140,
 		"fields": {
 			"nombre": "Longaví",
@@ -1119,7 +1119,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 141,
 		"fields": {
 			"nombre": "Parral",
@@ -1127,7 +1127,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 142,
 		"fields": {
 			"nombre": "Retiro",
@@ -1135,7 +1135,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 143,
 		"fields": {
 			"nombre": "San Javier",
@@ -1143,7 +1143,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 144,
 		"fields": {
 			"nombre": "Villa Alegre",
@@ -1151,7 +1151,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 145,
 		"fields": {
 			"nombre": "Yerbas Buenas",
@@ -1159,7 +1159,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 146,
 		"fields": {
 			"nombre": "Concepción",
@@ -1167,7 +1167,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 147,
 		"fields": {
 			"nombre": "Coronel",
@@ -1175,7 +1175,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 148,
 		"fields": {
 			"nombre": "Chiguayante",
@@ -1183,7 +1183,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 149,
 		"fields": {
 			"nombre": "Florida",
@@ -1191,7 +1191,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 150,
 		"fields": {
 			"nombre": "Hualqui",
@@ -1199,7 +1199,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 151,
 		"fields": {
 			"nombre": "Lota",
@@ -1207,7 +1207,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 152,
 		"fields": {
 			"nombre": "Penco",
@@ -1215,7 +1215,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 153,
 		"fields": {
 			"nombre": "San Pedro de la Paz",
@@ -1223,7 +1223,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 154,
 		"fields": {
 			"nombre": "Santa Juana",
@@ -1231,7 +1231,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 155,
 		"fields": {
 			"nombre": "Talcahuano",
@@ -1239,7 +1239,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 156,
 		"fields": {
 			"nombre": "Tomé",
@@ -1247,7 +1247,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 157,
 		"fields": {
 			"nombre": "Hualpén",
@@ -1255,7 +1255,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 158,
 		"fields": {
 			"nombre": "Lebu",
@@ -1263,7 +1263,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 159,
 		"fields": {
 			"nombre": "Arauco",
@@ -1271,7 +1271,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 160,
 		"fields": {
 			"nombre": "Cañete",
@@ -1279,7 +1279,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 161,
 		"fields": {
 			"nombre": "Contulmo",
@@ -1287,7 +1287,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 162,
 		"fields": {
 			"nombre": "Curanilahue",
@@ -1295,7 +1295,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 163,
 		"fields": {
 			"nombre": "Los Álamos",
@@ -1303,7 +1303,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 164,
 		"fields": {
 			"nombre": "Tirúa",
@@ -1311,7 +1311,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 165,
 		"fields": {
 			"nombre": "Los Ángeles",
@@ -1319,7 +1319,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 166,
 		"fields": {
 			"nombre": "Antuco",
@@ -1327,7 +1327,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 167,
 		"fields": {
 			"nombre": "Cabrero",
@@ -1335,7 +1335,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 168,
 		"fields": {
 			"nombre": "Laja",
@@ -1343,7 +1343,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 169,
 		"fields": {
 			"nombre": "Mulchén",
@@ -1351,7 +1351,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 170,
 		"fields": {
 			"nombre": "Nacimiento",
@@ -1359,7 +1359,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 171,
 		"fields": {
 			"nombre": "Negrete",
@@ -1367,7 +1367,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 172,
 		"fields": {
 			"nombre": "Quilaco",
@@ -1375,7 +1375,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 173,
 		"fields": {
 			"nombre": "Quilleco",
@@ -1383,7 +1383,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 174,
 		"fields": {
 			"nombre": "San Rosendo",
@@ -1391,7 +1391,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 175,
 		"fields": {
 			"nombre": "Santa Bárbara",
@@ -1399,7 +1399,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 176,
 		"fields": {
 			"nombre": "Tucapel",
@@ -1407,7 +1407,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 177,
 		"fields": {
 			"nombre": "Yumbel",
@@ -1415,7 +1415,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 178,
 		"fields": {
 			"nombre": "Alto Biobío",
@@ -1423,7 +1423,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 179,
 		"fields": {
 			"nombre": "Chillán",
@@ -1431,7 +1431,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 180,
 		"fields": {
 			"nombre": "Bulnes",
@@ -1439,7 +1439,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 181,
 		"fields": {
 			"nombre": "Cobquecura",
@@ -1447,7 +1447,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 182,
 		"fields": {
 			"nombre": "Coelemu",
@@ -1455,7 +1455,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 183,
 		"fields": {
 			"nombre": "Coihueco",
@@ -1463,7 +1463,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 184,
 		"fields": {
 			"nombre": "Chillán Viejo",
@@ -1471,7 +1471,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 185,
 		"fields": {
 			"nombre": "El Carmen",
@@ -1479,7 +1479,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 186,
 		"fields": {
 			"nombre": "Ninhue",
@@ -1487,7 +1487,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 187,
 		"fields": {
 			"nombre": "Ñiquén",
@@ -1495,7 +1495,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 188,
 		"fields": {
 			"nombre": "Pemuco",
@@ -1503,7 +1503,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 189,
 		"fields": {
 			"nombre": "Pinto",
@@ -1511,7 +1511,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 190,
 		"fields": {
 			"nombre": "Portezuelo",
@@ -1519,7 +1519,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 191,
 		"fields": {
 			"nombre": "Quillón",
@@ -1527,7 +1527,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 192,
 		"fields": {
 			"nombre": "Quirihue",
@@ -1535,7 +1535,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 193,
 		"fields": {
 			"nombre": "Ránquil",
@@ -1543,7 +1543,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 194,
 		"fields": {
 			"nombre": "San Carlos",
@@ -1551,7 +1551,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 195,
 		"fields": {
 			"nombre": "San Fabián",
@@ -1559,7 +1559,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 196,
 		"fields": {
 			"nombre": "San Ignacio",
@@ -1567,7 +1567,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 197,
 		"fields": {
 			"nombre": "San Nicolás",
@@ -1575,7 +1575,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 198,
 		"fields": {
 			"nombre": "Treguaco",
@@ -1583,7 +1583,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 199,
 		"fields": {
 			"nombre": "Yungay",
@@ -1591,7 +1591,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 200,
 		"fields": {
 			"nombre": "Temuco",
@@ -1599,7 +1599,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 201,
 		"fields": {
 			"nombre": "Carahue",
@@ -1607,7 +1607,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 202,
 		"fields": {
 			"nombre": "Cunco",
@@ -1615,7 +1615,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 203,
 		"fields": {
 			"nombre": "Curarrehue",
@@ -1623,7 +1623,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 204,
 		"fields": {
 			"nombre": "Freire",
@@ -1631,7 +1631,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 205,
 		"fields": {
 			"nombre": "Galvarino",
@@ -1639,7 +1639,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 206,
 		"fields": {
 			"nombre": "Gorbea",
@@ -1647,7 +1647,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 207,
 		"fields": {
 			"nombre": "Lautaro",
@@ -1655,7 +1655,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 208,
 		"fields": {
 			"nombre": "Loncoche",
@@ -1663,7 +1663,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 209,
 		"fields": {
 			"nombre": "Melipeuco",
@@ -1671,7 +1671,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 210,
 		"fields": {
 			"nombre": "Nueva Imperial",
@@ -1679,7 +1679,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 211,
 		"fields": {
 			"nombre": "Padre Las Casas",
@@ -1687,7 +1687,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 212,
 		"fields": {
 			"nombre": "Perquenco",
@@ -1695,7 +1695,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 213,
 		"fields": {
 			"nombre": "Pitrufquén",
@@ -1703,7 +1703,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 214,
 		"fields": {
 			"nombre": "Pucón",
@@ -1711,7 +1711,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 215,
 		"fields": {
 			"nombre": "Saavedra",
@@ -1719,7 +1719,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 216,
 		"fields": {
 			"nombre": "Teodoro Schmidt",
@@ -1727,7 +1727,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 217,
 		"fields": {
 			"nombre": "Toltén",
@@ -1735,7 +1735,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 218,
 		"fields": {
 			"nombre": "Vilcún",
@@ -1743,7 +1743,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 219,
 		"fields": {
 			"nombre": "Villarrica",
@@ -1751,7 +1751,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 220,
 		"fields": {
 			"nombre": "Cholchol",
@@ -1759,7 +1759,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 221,
 		"fields": {
 			"nombre": "Angol",
@@ -1767,7 +1767,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 222,
 		"fields": {
 			"nombre": "Collipulli",
@@ -1775,7 +1775,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 223,
 		"fields": {
 			"nombre": "Curacautín",
@@ -1783,7 +1783,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 224,
 		"fields": {
 			"nombre": "Ercilla",
@@ -1791,7 +1791,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 225,
 		"fields": {
 			"nombre": "Lonquimay",
@@ -1799,7 +1799,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 226,
 		"fields": {
 			"nombre": "Los Sauces",
@@ -1807,7 +1807,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 227,
 		"fields": {
 			"nombre": "Lumaco",
@@ -1815,7 +1815,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 228,
 		"fields": {
 			"nombre": "Purén",
@@ -1823,7 +1823,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 229,
 		"fields": {
 			"nombre": "Renaico",
@@ -1831,7 +1831,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 230,
 		"fields": {
 			"nombre": "Traiguén",
@@ -1839,7 +1839,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 231,
 		"fields": {
 			"nombre": "Victoria",
@@ -1847,7 +1847,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 232,
 		"fields": {
 			"nombre": "Valdivia",
@@ -1855,7 +1855,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 233,
 		"fields": {
 			"nombre": "Corral",
@@ -1863,7 +1863,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 234,
 		"fields": {
 			"nombre": "Futrono",
@@ -1871,7 +1871,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 235,
 		"fields": {
 			"nombre": "La Unión",
@@ -1879,7 +1879,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 236,
 		"fields": {
 			"nombre": "Lago Ranco",
@@ -1887,7 +1887,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 237,
 		"fields": {
 			"nombre": "Lanco",
@@ -1895,7 +1895,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 238,
 		"fields": {
 			"nombre": "Los Lagos",
@@ -1903,7 +1903,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 239,
 		"fields": {
 			"nombre": "Máfil",
@@ -1911,7 +1911,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 240,
 		"fields": {
 			"nombre": "Mariquina",
@@ -1919,7 +1919,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 241,
 		"fields": {
 			"nombre": "Paillaco",
@@ -1927,7 +1927,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 242,
 		"fields": {
 			"nombre": "Panguipulli",
@@ -1935,7 +1935,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 243,
 		"fields": {
 			"nombre": "Río Bueno",
@@ -1943,7 +1943,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 244,
 		"fields": {
 			"nombre": "Puerto Montt",
@@ -1951,7 +1951,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 245,
 		"fields": {
 			"nombre": "Calbuco",
@@ -1959,7 +1959,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 246,
 		"fields": {
 			"nombre": "Cochamó",
@@ -1967,7 +1967,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 247,
 		"fields": {
 			"nombre": "Fresia",
@@ -1975,7 +1975,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 248,
 		"fields": {
 			"nombre": "Frutillar",
@@ -1983,7 +1983,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 249,
 		"fields": {
 			"nombre": "Los Muermos",
@@ -1991,7 +1991,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 250,
 		"fields": {
 			"nombre": "Llanquihue",
@@ -1999,7 +1999,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 251,
 		"fields": {
 			"nombre": "Maullín",
@@ -2007,7 +2007,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 252,
 		"fields": {
 			"nombre": "Puerto Varas",
@@ -2015,7 +2015,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 253,
 		"fields": {
 			"nombre": "Castro",
@@ -2023,7 +2023,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 254,
 		"fields": {
 			"nombre": "Ancud",
@@ -2031,7 +2031,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 255,
 		"fields": {
 			"nombre": "Chonchi",
@@ -2039,7 +2039,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 256,
 		"fields": {
 			"nombre": "Curaco de Vélez",
@@ -2047,7 +2047,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 257,
 		"fields": {
 			"nombre": "Dalcahue",
@@ -2055,7 +2055,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 258,
 		"fields": {
 			"nombre": "Puqueldón",
@@ -2063,7 +2063,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 259,
 		"fields": {
 			"nombre": "Queilén",
@@ -2071,7 +2071,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 260,
 		"fields": {
 			"nombre": "Quellón",
@@ -2079,7 +2079,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 261,
 		"fields": {
 			"nombre": "Quemchi",
@@ -2087,7 +2087,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 262,
 		"fields": {
 			"nombre": "Quinchao",
@@ -2095,7 +2095,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 263,
 		"fields": {
 			"nombre": "Osorno",
@@ -2103,7 +2103,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 264,
 		"fields": {
 			"nombre": "Puerto Octay",
@@ -2111,7 +2111,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 265,
 		"fields": {
 			"nombre": "Purranque",
@@ -2119,7 +2119,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 266,
 		"fields": {
 			"nombre": "Puyehue",
@@ -2127,7 +2127,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 267,
 		"fields": {
 			"nombre": "Río Negro",
@@ -2135,7 +2135,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 268,
 		"fields": {
 			"nombre": "San Juan de la Costa",
@@ -2143,7 +2143,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 269,
 		"fields": {
 			"nombre": "San Pablo",
@@ -2151,7 +2151,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 270,
 		"fields": {
 			"nombre": "Chaitén",
@@ -2159,7 +2159,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 271,
 		"fields": {
 			"nombre": "Futaleufú",
@@ -2167,7 +2167,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 272,
 		"fields": {
 			"nombre": "Hualaihué",
@@ -2175,7 +2175,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 273,
 		"fields": {
 			"nombre": "Palena",
@@ -2183,7 +2183,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 274,
 		"fields": {
 			"nombre": "Coyhaique",
@@ -2191,7 +2191,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 275,
 		"fields": {
 			"nombre": "Lago Verde",
@@ -2199,7 +2199,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 276,
 		"fields": {
 			"nombre": "Aysén",
@@ -2207,7 +2207,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 277,
 		"fields": {
 			"nombre": "Cisnes",
@@ -2215,7 +2215,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 278,
 		"fields": {
 			"nombre": "Guaitecas",
@@ -2223,7 +2223,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 279,
 		"fields": {
 			"nombre": "Cochrane",
@@ -2231,7 +2231,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 280,
 		"fields": {
 			"nombre": "O'Higgins",
@@ -2239,7 +2239,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 281,
 		"fields": {
 			"nombre": "Tortel",
@@ -2247,7 +2247,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 282,
 		"fields": {
 			"nombre": "Chile Chico",
@@ -2255,7 +2255,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 283,
 		"fields": {
 			"nombre": "Río Ibáñez",
@@ -2263,7 +2263,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 284,
 		"fields": {
 			"nombre": "Punta Arenas",
@@ -2271,7 +2271,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 285,
 		"fields": {
 			"nombre": "Laguna Blanca",
@@ -2279,7 +2279,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 286,
 		"fields": {
 			"nombre": "Río Verde",
@@ -2287,7 +2287,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 287,
 		"fields": {
 			"nombre": "San Gregorio",
@@ -2295,7 +2295,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 288,
 		"fields": {
 			"nombre": "Cabo de Hornos",
@@ -2303,7 +2303,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 289,
 		"fields": {
 			"nombre": "Antártica",
@@ -2311,7 +2311,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 290,
 		"fields": {
 			"nombre": "Porvenir",
@@ -2319,7 +2319,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 291,
 		"fields": {
 			"nombre": "Primavera",
@@ -2327,7 +2327,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 292,
 		"fields": {
 			"nombre": "Timaukel",
@@ -2335,7 +2335,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 293,
 		"fields": {
 			"nombre": "Natales",
@@ -2343,7 +2343,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 294,
 		"fields": {
 			"nombre": "Torres del Paine",
@@ -2351,7 +2351,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 295,
 		"fields": {
 			"nombre": "Santiago",
@@ -2359,7 +2359,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 296,
 		"fields": {
 			"nombre": "Cerrillos",
@@ -2367,7 +2367,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 297,
 		"fields": {
 			"nombre": "Cerro Navia",
@@ -2375,7 +2375,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 298,
 		"fields": {
 			"nombre": "Conchalí",
@@ -2383,7 +2383,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 299,
 		"fields": {
 			"nombre": "El Bosque",
@@ -2391,7 +2391,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 300,
 		"fields": {
 			"nombre": "Estación Central",
@@ -2399,7 +2399,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 301,
 		"fields": {
 			"nombre": "Huechuraba",
@@ -2407,7 +2407,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 302,
 		"fields": {
 			"nombre": "Independencia",
@@ -2415,7 +2415,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 303,
 		"fields": {
 			"nombre": "La Cisterna",
@@ -2423,7 +2423,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 304,
 		"fields": {
 			"nombre": "La Florida",
@@ -2431,7 +2431,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 305,
 		"fields": {
 			"nombre": "La Granja",
@@ -2439,7 +2439,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 306,
 		"fields": {
 			"nombre": "La Pintana",
@@ -2447,7 +2447,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 307,
 		"fields": {
 			"nombre": "La Reina",
@@ -2455,7 +2455,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 308,
 		"fields": {
 			"nombre": "Las Condes",
@@ -2463,7 +2463,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 309,
 		"fields": {
 			"nombre": "Lo Barnechea",
@@ -2471,7 +2471,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 310,
 		"fields": {
 			"nombre": "Lo Espejo",
@@ -2479,7 +2479,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 311,
 		"fields": {
 			"nombre": "Lo Prado",
@@ -2487,7 +2487,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 312,
 		"fields": {
 			"nombre": "Macul",
@@ -2495,7 +2495,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 313,
 		"fields": {
 			"nombre": "Maipú",
@@ -2503,7 +2503,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 314,
 		"fields": {
 			"nombre": "Ñuñoa",
@@ -2511,7 +2511,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 315,
 		"fields": {
 			"nombre": "Pedro Aguirre Cerda",
@@ -2519,7 +2519,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 316,
 		"fields": {
 			"nombre": "Peñalolén",
@@ -2527,7 +2527,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 317,
 		"fields": {
 			"nombre": "Providencia",
@@ -2535,7 +2535,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 318,
 		"fields": {
 			"nombre": "Pudahuel",
@@ -2543,7 +2543,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 319,
 		"fields": {
 			"nombre": "Quilicura",
@@ -2551,7 +2551,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 320,
 		"fields": {
 			"nombre": "Quinta Normal",
@@ -2559,7 +2559,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 321,
 		"fields": {
 			"nombre": "Recoleta",
@@ -2567,7 +2567,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 322,
 		"fields": {
 			"nombre": "Renca",
@@ -2575,7 +2575,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 323,
 		"fields": {
 			"nombre": "San Joaquín",
@@ -2583,7 +2583,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 324,
 		"fields": {
 			"nombre": "San Miguel",
@@ -2591,7 +2591,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 325,
 		"fields": {
 			"nombre": "San Ramón",
@@ -2599,7 +2599,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 326,
 		"fields": {
 			"nombre": "Vitacura",
@@ -2607,7 +2607,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 327,
 		"fields": {
 			"nombre": "Puente Alto",
@@ -2615,7 +2615,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 328,
 		"fields": {
 			"nombre": "Pirque",
@@ -2623,7 +2623,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 329,
 		"fields": {
 			"nombre": "San José de Maipo",
@@ -2631,7 +2631,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 330,
 		"fields": {
 			"nombre": "Colina",
@@ -2639,7 +2639,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 331,
 		"fields": {
 			"nombre": "Lampa",
@@ -2647,7 +2647,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 332,
 		"fields": {
 			"nombre": "Tiltil",
@@ -2655,7 +2655,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 333,
 		"fields": {
 			"nombre": "San Bernardo",
@@ -2663,7 +2663,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 334,
 		"fields": {
 			"nombre": "Buin",
@@ -2671,7 +2671,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 335,
 		"fields": {
 			"nombre": "Calera de Tango",
@@ -2679,7 +2679,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 336,
 		"fields": {
 			"nombre": "Paine",
@@ -2687,7 +2687,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 337,
 		"fields": {
 			"nombre": "Melipilla",
@@ -2695,7 +2695,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 338,
 		"fields": {
 			"nombre": "Alhué",
@@ -2703,7 +2703,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 339,
 		"fields": {
 			"nombre": "Curacaví",
@@ -2711,7 +2711,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 340,
 		"fields": {
 			"nombre": "María Pinto",
@@ -2719,7 +2719,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 341,
 		"fields": {
 			"nombre": "San Pedro",
@@ -2727,7 +2727,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 342,
 		"fields": {
 			"nombre": "Talagante",
@@ -2735,7 +2735,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 343,
 		"fields": {
 			"nombre": "El Monte",
@@ -2743,7 +2743,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 344,
 		"fields": {
 			"nombre": "Isla de Maipo",
@@ -2751,7 +2751,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 345,
 		"fields": {
 			"nombre": "Padre Hurtado",
@@ -2759,7 +2759,7 @@
 		}
 	},
 	{
-		"model": "tienda.comunas",
+		"model": "tienda.comuna",
 		"pk": 346,
 		"fields": {
 			"nombre": "Peñaflor",

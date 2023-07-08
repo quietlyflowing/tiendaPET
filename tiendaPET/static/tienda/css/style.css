@@ -1,3 +1,12 @@
+.nav-link.active::after {
+  font-family: "FontAwesome";
+  content: "\f111"; /* the caret */
+  position: relative;
+  left: -50%; /* center the caret */
+  bottom: -.8rem; /* position under the text */
+  font-size: .4rem;
+}
+
 .box {
       background-color: lightgrey;
       width: 600px;
@@ -26,3 +35,4 @@
       height: 100%;
       object-fit: cover;
     }
+     

@@ -1,19 +1,62 @@
 $(document).ready(function() {
 BASE_URL = window.location.protocol + "//" + window.location.hostname + ":" + window.location.port;
-console.log('App V2. Ready!')
 
+function login() {
+    $.ajax({
+        url : BASE_URL + "/ajax/login/",
+        type : "POST", 
+        data : { 
+            email : $('#email').val(), 
+            password : $('#password').val(), 
+            csrfmiddlewaretoken: $('input[name=csrfmiddlewaretoken]').val() 
+        }, 
+
+       
+        success : function(json) {
+            $('#email').val(''); 
+            $('#password').val(''); 
+            console.log(json); 
+            $('#modalLogin').modal('hide');
+            console.log("success");
+
+        },
+
+        // handle a non-successful response
+        error : function(xhr,errmsg,err) {
+            console.log(xhr.status + ": " + xhr.responseText); // provide a bit more info about the error to the console
+        }
+    });
+};
+
+//Procedimiento para añadir un listener que invoca el modal de inicio de sesión en la navbar
+$('#loginLink').on('click', function() {
+    console.log('Abriendo modal de inicio de sesión.');
+    $.get(BASE_URL+'/ajax/getModalLogin/', function(data){
+        $(data).appendTo('#tiendaNav');
+        $('#modalLogin').modal('show');
+        $('#iniciarSesion').click( function() {
+            login();
+            console.log('Forma enviada!');
+            
+        });
+        $('#modalLogin').on('hidden.bs.modal', function(e){
+            $(this).remove();
+            console.log('Acá invocamos el código para actualizar la Navbar para que nos muestre el log');
+        })
+    });
+});
 
 
 
 //Procedimiento que añade listeners al modal de carrito.
 $('.container').on('click', '#botonCarro', function() {
     console.log('Abriendo modal');
-    $.get(BASE_URL+'/api/getModalCart/', function(data) {
+    $.get(BASE_URL+'/ajax/getModalCart/', function(data) {
         $(data).appendTo('#tiendaNav');
         $('#modalCarrito').modal('show');
         $('#modalCarrito').on('hidden.bs.modal', function(e) {
             $(this).remove();
-            $.get(BASE_URL + '/api/cartButtonUpdate', function(data) {
+            $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                 console.log('Actualización del botón solicitada');
                 $('#indicadorCarrito').html(data);});});
 
@@ -22,7 +65,7 @@ $('.container').on('click', '#botonCarro', function() {
                 var carrito_id = 1 //hardcodeado por ahora
                 var id_string = $(this).attr('id');
                 var arrayString = id_string.split('_');
-                 $.get(BASE_URL+'/api/removeAllTheSameItems/'+carrito_id + '/' +arrayString[1]+ '/', function(data){
+                 $.get(BASE_URL+'/ajax/removeAllTheSameItems/'+carrito_id + '/' +arrayString[1]+ '/', function(data){
                      console.log(data)
                      $('#'+id_string).closest('tr').remove();
                      if ($('#cuerpoTabla').children('tr').length === 0) {
@@ -30,7 +73,7 @@ $('.container').on('click', '#botonCarro', function() {
                         console.log('La tabla está vacía. Cerrando');
                         $('#modalCarrito').modal('hide');
                     }
-                     $.get(BASE_URL + '/api/cartButtonUpdate', function(data) {
+                     $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                         console.log('Actualización del botón solicitada');
                         $('#indicadorCarrito').html(data);
                     });
@@ -49,11 +92,11 @@ $('.container').on('click', '#botonCarro', function() {
                     carrito_id: 1,
                     cantidad_producto: cantidad
                 };
-                $.post(BASE_URL + '/api/updateItems', JSON.stringify(datos), function() {
-                    $.get(BASE_URL + '/api/getCartStats', function(data) {
+                $.post(BASE_URL + '/ajax/updateItems', JSON.stringify(datos), function() {
+                    $.get(BASE_URL + '/ajax/getCartStats', function(data) {
                         console.log(data);
                     });
-                    $.get(BASE_URL + '/api/cartButtonUpdate', function(data) {
+                    $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                         console.log('Actualización del botón solicitada');
                         $('#indicadorCarrito').html(data);
                     });
@@ -62,11 +105,10 @@ $('.container').on('click', '#botonCarro', function() {
             //Fin Botón 4:
             //Botón 5: Elimina el carrito y cierra el modal.
             $('#killCarroStorage').on('click', function() {
-                $.get(BASE_URL+'/api/deleteEntireCart/1', function() {
-                    console.log(data)
+                $.get(BASE_URL+'/ajax/deleteEntireCart/1', function() {
                     $('.table').remove();
                     $('#modalCarrito').modal('hide');
-                    $.get(BASE_URL + '/api/cartButtonUpdate', function(data) {
+                    $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                         console.log('Actualización del botón solicitada');
                         $('#indicadorCarrito').html(data);
                     });
@@ -86,9 +128,9 @@ $("button").each(function() {
         $(this).click(function() {
             const grandParent = $(this).parent().parent().attr('id');
             var datos = {producto_id: grandParent, carrito_id: 1, cantidad:1, cliente_id: 0}; //hardcodeado por ahora
-            $.post(BASE_URL+'/api/addItem', JSON.stringify(datos), function(response) {
+            $.post(BASE_URL+'/ajax/addItem', JSON.stringify(datos), function(response) {
                 console.log(response);
-            }).done(function(){  $.get(BASE_URL+'/api/cartButtonUpdate', function(data){ 
+            }).done(function(){  $.get(BASE_URL+'/ajax/cartButtonUpdate', function(data){ 
                 console.log('Actualización del botón solicitada');
                 $('#indicadorCarrito').html(data);
             });
@@ -102,19 +144,19 @@ $("button").each(function(){
     if($(this).parent().hasClass('card-body') && $(this).text() === 'Eliminar') {
         $(this).click(function(){
             const grandParent = $(this).parent().parent().attr('id');
-            $.get(BASE_URL+'/api/getModalConfirm', function(data) {
+            $.get(BASE_URL+'/ajax/getModalConfirm', function(data) {
                 $(data).appendTo('#tiendaNav');
                 $('#modalConfirmacion').modal('show');
                 console.log("Modal de Confirmación solicitado")
                 $('#modalConfirmacion').on('hidden.bs.modal', function(e) {
                     $(this).remove();
-                    $.get(BASE_URL + '/api/cartButtonUpdate', function(data) {
+                    $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                         console.log('Actualización del botón solicitada');
                         $('#indicadorCarrito').html(data);});});
                 $('#confirmarEliminacion').on('click', function() {
                    $('#cardGallery'+grandParent).remove();
                    $('#modalConfirmacion').modal('hide');
-                   $.get(BASE_URL + '/api/removeProduct/'+grandParent, function(data){
+                   $.get(BASE_URL + '/ajax/removeProduct/'+grandParent, function(data){
                         console.log(data);
                    });
                 });
@@ -130,7 +172,7 @@ $("button").each(function(){
          $(this).on('click', function() {
             const grandParent = $(this).parent().parent().attr('id');
             console.log('Abriendo modal CUD');
-            $.get(BASE_URL + '/api/getModalUpdate/'+grandParent, function(data){
+            $.get(BASE_URL + '/ajax/getModalUpdate/'+grandParent, function(data){
                 $(data).appendTo('#tiendaNav');
                 $('#modalCUD').modal('show');
                 $('#modalCUD').on('hidden.bs.modal', function(e) {
@@ -151,7 +193,7 @@ $("button").each(function(){
                         var formData = new FormData(form);
                         console.log(formData)
                         $.ajax({
-                            url: BASE_URL + '/api/updateProduct/' + grandParent,  
+                            url: BASE_URL + '/ajax/updateProduct/' + grandParent,  
                             type: 'POST',
                             data: formData,
                             processData: false,
@@ -179,14 +221,14 @@ $("button").each(function(){
     if($(this).parent().hasClass('card-body') && $(this).text() === 'Ver') {
         $(this).click(function() {
             const grandParent = $(this).parent().parent().attr('id');
-            $.get(BASE_URL+'/api/getModalProducto/'+grandParent, function(data){
+            $.get(BASE_URL+'/ajax/getModalProducto/'+grandParent, function(data){
                 $(data).appendTo('#tiendaNav');
                 $('#modalProducto').modal('show');
                 $('#anadeProducto').click(function() {
                     var datos = {producto_id: grandParent, carrito_id: 1, cantidad:1, cliente_id: 0};
-                    $.post(BASE_URL+'/api/addItem', JSON.stringify(datos), function(response) {
+                    $.post(BASE_URL+'/ajax/addItem', JSON.stringify(datos), function(response) {
                         console.log(response);
-                    }).done(function(){  $.get(BASE_URL+'/api/cartButtonUpdate', function(data){ 
+                    }).done(function(){  $.get(BASE_URL+'/ajax/cartButtonUpdate', function(data){ 
                         console.log('Actualización del botón solicitada');
                         $('#indicadorCarrito').html(data);
                     });
@@ -204,7 +246,7 @@ $("button").each(function(){
 //Procedimiento para crear listener en el botón añadir
 $('#botonCrud').on('click', function() {
     console.log('Soy un botón para añadir productos');
-    $.get(BASE_URL + '/api/getModalCUD', function(data) {
+    $.get(BASE_URL + '/ajax/getModalCUD', function(data) {
         console.log('Abriendo modal CUD');
         $(data).appendTo('#tiendaNav');
         $('#modalCUD').modal('show');
@@ -226,7 +268,7 @@ $('#botonCrud').on('click', function() {
             var formData = new FormData(form);
             console.log(formData)
             $.ajax({
-                url: BASE_URL + '/api/addProduct',  
+                url: BASE_URL + '/ajax/addProduct',  
                 type: 'POST',
                 data: formData,
                 processData: false,
@@ -369,7 +411,7 @@ if(window.location.pathname === '/donar/') {
     });
     
 }
-
+console.log('App V2. Ready!')
 
 });
 

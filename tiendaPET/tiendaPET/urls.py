@@ -1,6 +1,7 @@
 from tienda import views
 from django.conf import settings
 from django.conf.urls.static import static
+from django.contrib import admin
 """
 URL configuration for tiendaPET project.
 
@@ -22,27 +23,29 @@ from django.urls import path
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index),
-    path('gatos/', views.cats),
-    path('perros/', views.dogs),
-    path('contacto/', views.contact),
-    path('donar/', views.donar),
+    path('', views.index, name='index'),
+    path('gatos/', views.cats, name='gatos'),
+    path('perros/', views.dogs, name='perros'),
+    path('contacto/', views.contactInForm, name='contacto'),
+    path('donar/', views.donarInForm, name='donar'),
     path('checkout/', views.checkout),
     #Paths que implementan API/AJAX
-    path('api/addItem', views.addToCarritoAction),
-    path('api/removeAllTheSameItems/<int:carrito_id>/<int:producto_id>/', views.removeSameRowAction),
-    path('api/updateItems', views.updateCartAction),
-    path('api/getItems/<int:carrito_id>', views.getCartDetails),
-    path('api/getModalCart/', views.modalCarro),
-    path('api/getModalProducto/<int:id>', views.modalProducto),
-    path('api/cartButtonUpdate', views.reloadCartButtton), 
-    path('api/deleteEntireCart/<int:carrito_id>', views.deleteAllCart),
-    path('api/removeProduct/<int:producto_id>', views.removeProduct),
-    path('api/addProduct', views.addProduct),
-    path('api/getModalCUD', views.modalCUD),
-    path('api/getModalUpdate/<int:producto_id>', views.modalUpdate),
-    path('api/updateProduct/<int:producto_id>', views.updateProduct),
-    path('api/getModalConfirm', views.modalConfirmaBorradoProducto),
-    path('api/getCartStats', views.cartStats)
+    path('ajax/addItem', views.addToCarritoAction),
+    path('ajax/getModalLogin/', views.modalLogin),
+    path('ajax/login/', views.login),
+    path('ajax/removeAllTheSameItems/<int:carrito_id>/<int:producto_id>/', views.removeSameRowAction),
+    path('ajax/updateItems', views.updateCartAction),
+    path('ajax/getItems/<int:carrito_id>', views.getCartDetails),
+    path('ajax/getModalCart/', views.modalCarro),
+    path('ajax/getModalProducto/<int:id>', views.modalProducto),
+    path('ajax/cartButtonUpdate', views.reloadCartButtton), 
+    path('ajax/deleteEntireCart/<int:carrito_id>', views.deleteAllCart),
+    path('ajax/removeProduct/<int:producto_id>', views.removeProduct),
+    path('ajax/addProduct', views.addProduct),
+    path('ajax/getModalCUD', views.modalCUD),
+    path('ajax/getModalUpdate/<int:producto_id>', views.modalUpdate),
+    path('ajax/updateProduct/<int:producto_id>', views.updateProduct),
+    path('ajax/getModalConfirm', views.modalConfirmaBorradoProducto),
+    path('ajax/getCartStats', views.cartStats)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

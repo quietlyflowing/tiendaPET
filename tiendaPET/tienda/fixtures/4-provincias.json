@@ -1,6 +1,6 @@
 [
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 1,
     "fields": {
       "nombre": "Arica",
@@ -8,7 +8,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 2,
     "fields": {
       "nombre": "Parinacota",
@@ -16,7 +16,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 3,
     "fields": {
       "nombre": "Iquique",
@@ -24,7 +24,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 4,
     "fields": {
       "nombre": "Tamarugal",
@@ -32,7 +32,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 5,
     "fields": {
       "nombre": "Tocopilla",
@@ -40,7 +40,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 6,
     "fields": {
       "nombre": "Loa",
@@ -48,7 +48,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 7,
     "fields": {
       "nombre": "Antofagasta",
@@ -56,7 +56,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 8,
     "fields": {
       "nombre": "Chañaral",
@@ -64,7 +64,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 9,
     "fields": {
       "nombre": "Copiapó",
@@ -72,7 +72,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 10,
     "fields": {
       "nombre": "Huasco",
@@ -80,7 +80,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 11,
     "fields": {
       "nombre": "Elqui",
@@ -88,7 +88,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 12,
     "fields": {
       "nombre": "Limarí",
@@ -96,7 +96,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 13,
     "fields": {
       "nombre": "Choapa",
@@ -104,7 +104,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 14,
     "fields": {
       "nombre": "Petorca",
@@ -112,7 +112,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 15,
     "fields": {
       "nombre": "Los Andes",
@@ -120,7 +120,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 16,
     "fields": {
       "nombre": "San Felipe de Aconcagua",
@@ -128,7 +128,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 17,
     "fields": {
       "nombre": "Quillota",
@@ -136,7 +136,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 18,
     "fields": {
       "nombre": "Valparaíso",
@@ -144,7 +144,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 19,
     "fields": {
       "nombre": "San Antonio",
@@ -152,7 +152,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 20,
     "fields": {
       "nombre": "Isla de Pascua",
@@ -160,7 +160,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 21,
     "fields": {
       "nombre": "Marga Marga",
@@ -168,7 +168,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 22,
     "fields": {
       "nombre": "Chacabuco",
@@ -176,7 +176,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 23,
     "fields": {
       "nombre": "Santiago",
@@ -184,7 +184,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 24,
     "fields": {
       "nombre": "Cordillera",
@@ -192,7 +192,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 25,
     "fields": {
       "nombre": "Maipo",
@@ -200,7 +200,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 26,
     "fields": {
       "nombre": "Melipilla",
@@ -208,7 +208,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 27,
     "fields": {
       "nombre": "Talagante",
@@ -216,7 +216,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 28,
     "fields": {
       "nombre": "Cachapoal",
@@ -224,7 +224,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 29,
     "fields": {
       "nombre": "Colchagua",
@@ -232,7 +232,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 30,
     "fields": {
       "nombre": "Cardenal Caro",
@@ -240,7 +240,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 31,
     "fields": {
       "nombre": "Curicó",
@@ -248,7 +248,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 32,
     "fields": {
       "nombre": "Talca",
@@ -256,7 +256,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 33,
     "fields": {
       "nombre": "Linares",
@@ -264,7 +264,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 34,
     "fields": {
       "nombre": "Cauquenes",
@@ -272,7 +272,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 35,
     "fields": {
       "nombre": "Diguillín",
@@ -280,7 +280,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 36,
     "fields": {
       "nombre": "Itata",
@@ -288,7 +288,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 37,
     "fields": {
       "nombre": "Punilla",
@@ -296,7 +296,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 38,
     "fields": {
       "nombre": "Biobío",
@@ -304,7 +304,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 39,
     "fields": {
       "nombre": "Concepción",
@@ -312,7 +312,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 40,
     "fields": {
       "nombre": "Arauco",
@@ -320,7 +320,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 41,
     "fields": {
       "nombre": "Malleco",
@@ -328,7 +328,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 42,
     "fields": {
       "nombre": "Cautín",
@@ -336,7 +336,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 43,
     "fields": {
       "nombre": "Valdivia",
@@ -344,7 +344,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 44,
     "fields": {
       "nombre": "Ranco",
@@ -352,7 +352,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 45,
     "fields": {
       "nombre": "Osorno",
@@ -360,7 +360,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 46,
     "fields": {
       "nombre": "Llanquihue",
@@ -368,7 +368,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 47,
     "fields": {
       "nombre": "Chiloé",
@@ -376,7 +376,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 48,
     "fields": {
       "nombre": "Palena",
@@ -384,7 +384,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 49,
     "fields": {
       "nombre": "Coyhaique",
@@ -392,7 +392,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 50,
     "fields": {
       "nombre": "Aysén",
@@ -400,7 +400,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 51,
     "fields": {
       "nombre": "General Carrera",
@@ -408,7 +408,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 52,
     "fields": {
       "nombre": "Capitán Prat",
@@ -416,7 +416,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 53,
     "fields": {
       "nombre": "Última Esperanza",
@@ -424,7 +424,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 54,
     "fields": {
       "nombre": "Magallanes",
@@ -432,7 +432,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 55,
     "fields": {
       "nombre": "Tierra del Fuego",
@@ -440,7 +440,7 @@
     }
   },
   {
-    "model": "tienda.provincias",
+    "model": "tienda.provincia",
     "pk": 56,
     "fields": {
       "nombre": "Antártica Chilena",
