@@ -22,12 +22,16 @@
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'gatos' %} active {% endif %}" href="/gatos">Productos para Gatos</a>
               </li>
+              {% if request.user.is_staff is False%}
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %}active{% endif %}" href="/contacto">Contacto</a>
               </li>
+              {% endif %}
+              {% if request.user.is_staff is False%}
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'donar'%}active {% endif %}" href="/donar"><b>Donar</b></a>
               </li>
+              {% endif %}
             </ul>
           </div>
         </div>
@@ -36,9 +40,19 @@
           <input class="form-control" data-bs-toggle="modal" data-bs-target="#modalBusqueda" type="search" id="busqueda" placeholder="Búsqueda" aria-label="Búsqueda">
         </form> {% endcomment %}
         <ul class="navbar-nav me-auto">
+          {% if request.user.is_authenticated and request.user.cliente is not None and request.user.is_staff is False %}
+        <li class="nav-item">
+          <a class="nav-link" id="userLink" href="#">Hola, {{user.cliente.primerNombre}}  {{user.cliente.primerApellido}}</a>
+        </li>
+        {% elif request.user.is_authenticated and request.user.is_staff is True%}
+        <li class="nav-item">
+          <a class="nav-link" id="loginLink" href="#">Hola, {{user.email}} </a>
+        </li>
+        {% else %}
         <li class="nav-item">
           <a class="nav-link" id="loginLink" href="#">Iniciar Sesión</a>
         </li>
+        {% endif %}
       </ul>
       </div>
     </nav>

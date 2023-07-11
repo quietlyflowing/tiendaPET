@@ -7,6 +7,7 @@
   font-size: .4rem;
 }
 
+
 .box {
       background-color: lightgrey;
       width: 600px;
@@ -36,3 +37,39 @@
       object-fit: cover;
     }
      
+
+    .nav-link.active::after {
+      font-family: "FontAwesome";
+      content: "\f111"; /* the caret */
+      position: relative;
+      left: -50%; /* center the caret */
+      bottom: -.8rem; /* position under the text */
+      font-size: .4rem;
+  }
+#id_nombre-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_email-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_razon-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_comentario-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#agree-error {
+  color: #dc3545;
+  margin-top: -1.5rem;
+  white-space: nowrap;
+  position: relative;
+  top: revert;
+}

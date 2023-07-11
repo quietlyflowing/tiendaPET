@@ -6,12 +6,13 @@ from django.utils.translation import gettext_lazy as _
 from .managers import CustomUserManager
 
 
-
+# Create your models here.
 class Usuario(AbstractBaseUser, PermissionsMixin):
     email = models.EmailField(_("email address"), unique=True)
     is_staff = models.BooleanField(default=False)
     is_active = models.BooleanField(default=True)
     date_joined = models.DateTimeField(default=timezone.now)
+    cliente=models.OneToOneField('Cliente', on_delete=models.CASCADE, null=True)
 
     USERNAME_FIELD = "email"
     REQUIRED_FIELDS = []
@@ -21,7 +22,7 @@ class Usuario(AbstractBaseUser, PermissionsMixin):
     def __str__(self):
         return self.email
 
-# Create your models here.
+
 class Categoria(models.Model):
     id=models.AutoField(primary_key=True)
     nombre=models.CharField(blank=False, max_length=50, null=False)
@@ -67,24 +68,27 @@ class Producto(models.Model):
         return self.nombre
 
 class Carrito(models.Model):
-    cliente=models.ForeignKey('Cliente', on_delete=models.CASCADE, null=True)
-    valorTotal=models.IntegerField(blank=False, default=0)
+    cantidadTotal=models.IntegerField(blank=False, default=0, db_column='cantidad_total')
+    valorTotal=models.IntegerField(blank=False, default=0, db_column= 'valor_total')
 
 
 class Cliente(models.Model):
     rut=models.IntegerField(blank=False, null=False)
     dv=models.CharField(blank=False, max_length=1, null=False)
-    primerApellido=models.CharField(blank=False, max_length=100, null=False)    
-    segundoApellido=models.CharField(blank=True, max_length=100, null=True)
+    primerNombre=models.CharField(blank=False, max_length=100, null=False, db_column='primer_nombre')
+    segundoNombre=models.CharField(blank=False, max_length=255, null=True, db_column='segundo_nombre')
+    primerApellido=models.CharField(blank=False, max_length=100, null=False, db_column='primer_apellido')    
+    segundoApellido=models.CharField(blank=True, max_length=100, null=True, db_column='segundo_apellido')
     direccion=models.CharField(blank=False, max_length=100, null=False)
     comuna=models.ForeignKey('Comuna', on_delete=models.CASCADE)
-    usuario=models.ForeignKey('Usuario', on_delete=models.CASCADE, null=True)
+    carrito=models.OneToOneField('Carrito', null=True, on_delete=models.CASCADE)
+    
 
 class DetalleCarrito(models.Model):
     producto=models.ForeignKey('Producto', on_delete=models.CASCADE)
     carrito=models.ForeignKey('Carrito', on_delete=models.CASCADE)
-    cantidad=models.IntegerField(blank=False, null=False)
-    precioTotal=models.IntegerField(blank=False, db_column="precio_total", null=False)
+    cantidad=models.IntegerField(blank=False, null=False, default=0)
+    precioTotal=models.IntegerField(blank=False, db_column="precio_total", null=False, default=0)
 
 
 class Donante(models.Model):

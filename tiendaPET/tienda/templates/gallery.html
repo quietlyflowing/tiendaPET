@@ -22,7 +22,11 @@
   <body>
     {% include  'components/navbar.html' %}
     <div class="container">
+      {% if request.user.is_staff is False%}
+      <div class="d-flex py-3 align-items-center flex flex-row-reverse" id="indicadorCarrito">
       {% include 'components/cartButton.html' with carrito_numero=cart_cantidad %}
+    </div>
+      {% endif %}
       {% comment %} {% include 'components/alert.html' %} {% endcomment %}
       {% include 'components/jumbotron.html' %}
       <div class="row">
@@ -52,7 +56,9 @@
           {% endif %}
 
         {% endfor %}
+        {% if request.user.is_staff is True %}
         {% include 'components/crudButton.html' %} 
+        {% endif %}
       </div>
 
       <!--Galería visible en mobil-->

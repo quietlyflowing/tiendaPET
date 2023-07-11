@@ -107,4 +107,7 @@ class ContactoForm(forms.Form):
         ('3', 'Reclamo'),
     ), widget=forms.Select(attrs={'class': 'form-select'}))
     comentario = forms.CharField(label='Su mensaje', widget=forms.Textarea(attrs={'rows': 8, 'cols': 7, 'maxlength': 700, 'class': 'form-control'}))
-    agree = forms.BooleanField(label='He leído y acepto los términos y condiciones.', widget=forms.CheckboxInput(attrs={'class': 'form-check-input'}))
+    agree = forms.BooleanField(
+    label='He leído y acepto los términos y condiciones.', 
+    error_messages= {'required': 'Debe aceptar nuestros términos y condiciones.'}, 
+    widget=forms.CheckboxInput(attrs={'class': 'form-check'}))

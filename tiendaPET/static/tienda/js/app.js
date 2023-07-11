@@ -58,26 +58,47 @@ $('.container').on('click', '#botonCarro', function() {
             $(this).remove();
             $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                 console.log('Actualización del botón solicitada');
-                $('#indicadorCarrito').html(data);});});
+                $('#indicadorCarrito').html(data);
+            });});
 
               //Botón 3: Elimina la fila de la página de pago
               $("td > .btn.btn-danger").click(function() {
-                var carrito_id = 1 //hardcodeado por ahora
+                // var carrito_id = 1 //hardcodeado por ahora
                 var id_string = $(this).attr('id');
                 var arrayString = id_string.split('_');
-                 $.get(BASE_URL+'/ajax/removeAllTheSameItems/'+carrito_id + '/' +arrayString[1]+ '/', function(data){
-                     console.log(data)
-                     $('#'+id_string).closest('tr').remove();
-                     if ($('#cuerpoTabla').children('tr').length === 0) {
-                        $('.table').remove();
-                        console.log('La tabla está vacía. Cerrando');
-                        $('#modalCarrito').modal('hide');
-                    }
-                     $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
+                $.ajax({
+                    url: BASE_URL+'/ajax/removeAllTheSameItems/', 
+                    type: 'DELETE',
+                    contentType: 'application/json', 
+                    data: JSON.stringify({ 'producto_id': arrayString[1] }),
+                    success: function(response) {
+                        // Handle the response upon success
+                        console.log(response);
+                        //$('#'+id_string).closest('tr').remove();
+                        $('#indicadorTotal').fadeToggle('fast', function() {
+                            $(this).html('Total: $' + response.context.valor_total);
+                        }).fadeToggle('fast');
+                        $('#' + id_string).closest('tr').fadeOut('slow', function() {
+                            $(this).remove();
+                            if ($('#cuerpoTabla').children('tr').length == 0) {
+                                $('.table').remove();
+                                $('#indicadorTotal').remove();
+                                $('.modal-footer').remove();
+                                console.log('La tabla está vacía. Cerrando');
+                                $('#modalCarrito').modal('hide');
+                            }
+                        });
+                       
+                       $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
                         console.log('Actualización del botón solicitada');
                         $('#indicadorCarrito').html(data);
                     });
-                 });
+                    },
+                    error: function(error) {
+                        // Handle the error response
+                        console.log(error);
+                    }
+                });
             });
             //Fin listener botón 3
             //Botón 4: // Actualiza el carrito conforme se mueve las cantidades 
@@ -85,35 +106,66 @@ $('.container').on('click', '#botonCarro', function() {
                 var cantidad = $(this).val();
                 var id_string = $(this).attr('id');
                 var arrayString = id_string.split('_');
-                console.log(arrayString);
-                console.log(cantidad);
                 var datos = {
                     producto_id: arrayString[1],
-                    carrito_id: 1,
                     cantidad_producto: cantidad
                 };
-                $.post(BASE_URL + '/ajax/updateItems', JSON.stringify(datos), function() {
-                    $.get(BASE_URL + '/ajax/getCartStats', function(data) {
-                        console.log(data);
-                    });
-                    $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
-                        console.log('Actualización del botón solicitada');
-                        $('#indicadorCarrito').html(data);
-                    });
+                $.ajax({
+                    url: BASE_URL + '/ajax/updateItems',
+                    type: 'PUT',
+                    data: JSON.stringify(datos),
+                    contentType: 'application/json',
+                    success: function(response) {
+                        //console.log(data);
+                        //$('#precioTotalID'+arrayString[1]).html(`$`+response.context.precio_total);
+                        $('#precioTotalID' + arrayString[1])
+                            .fadeToggle('fast', function() {
+                            $(this).html('$' + response.context.precio_total)
+                                                        })
+                            .fadeToggle('fast');
+                        $('#indicadorTotal').fadeToggle('fast', function() {
+                            $(this).html('Total: $' + response.context.valor_total);
+                        }).fadeToggle('fast');
+
+                        
+                        $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
+                               console.log('Actualización del botón solicitada');
+                                $('#indicadorCarrito').html(data);
+                         });
+                    }
                 });
             });
             //Fin Botón 4:
             //Botón 5: Elimina el carrito y cierra el modal.
+            // $('#killCarroStorage').on('click', function() {
+            //     $.get(BASE_URL+'/ajax/deleteEntireCart/', function() {
+            //         $('.table').remove();
+            //         $('#modalCarrito').modal('hide');
+            //         $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
+            //             console.log('Actualización del botón solicitada');
+            //             $('#indicadorCarrito').html(data);
+            //         });
+            //     });
+            // });
             $('#killCarroStorage').on('click', function() {
-                $.get(BASE_URL+'/ajax/deleteEntireCart/1', function() {
-                    $('.table').remove();
-                    $('#modalCarrito').modal('hide');
-                    $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
-                        console.log('Actualización del botón solicitada');
-                        $('#indicadorCarrito').html(data);
-                    });
+                $.ajax({
+                    url: BASE_URL + '/ajax/deleteEntireCart/',
+                    type: 'DELETE',
+                    success: function() {
+                        $('.table').remove();
+                        $('#modalCarrito').modal('hide');
+                        $.get(BASE_URL + '/ajax/cartButtonUpdate', function(data) {
+                            console.log('Actualización del botón solicitada');
+                            $('#indicadorCarrito').html(data);
+                        });
+                    },
+                    error: function(error) {
+                        console.log(error); // This is to check any errors if the AJAX request fails
+                    }
                 });
             });
+
+
             $('#buttonCheckoOut').on('click', function() {
                 console.log('Redirigiendo a checkout');
                 window.location.href='/checkout/'
@@ -297,6 +349,9 @@ document.getElementById("footer").innerHTML = `<div class="container text-center
 
 
 if(window.location.pathname === '/contacto/') {
+
+//    $('div.mb-3:nth-child(11) > label:nth-child(1)')
+
 $('#formaContacto').validate({
     rules: {
         nombre: {
