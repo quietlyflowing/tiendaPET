@@ -507,7 +507,6 @@ $(document).ready(function () {
                     nombre: {
                         required: true,
                         minlength: 2,
-                        pattern: new RegExp("^(?=.{1,40}$)[a-zA-ZáéíóúüñÁÉÍÓÚÑ]+(?:[\\s][a-zA-ZáéíóúüñÁÉÍÓÚÑ]+)*$")
                     },
                     email: {
                         required: true,

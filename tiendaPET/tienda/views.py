@@ -106,7 +106,7 @@ def removeMessage(request, id):
     if request.user.is_authenticated and request.user.is_staff:
         mensaje = MensajesContacto.objects.get(pk=id)
         mensaje.delete()
-        return redirect('/messages/')
+        return redirect('/mensajes/')
 
 
 def editUser(request):
