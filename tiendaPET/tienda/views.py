@@ -35,7 +35,7 @@ def login(request):
         if user is not None:
             auth_login(request, user)
             try:
-                carrito = user.cliente.carrito
+                carrito = request.user.cliente.carrito
             except ObjectDoesNotExist:
                 carrito = Carrito.objects.create(cliente=cliente)
             return JsonResponse({'status':'success'}, status=200)
