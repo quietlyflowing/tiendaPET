@@ -2,15 +2,19 @@
 
 <!--Card-->
 <div class="col-md-6 col-lg-4" id="cardGallery{{id_producto}}">
-    <div class="card h-100" id="{{ id_producto }}">
+    <div class="card shadow h-100" id="{{ id_producto }}">
       <img src="{% static imagen_producto %}" class="card-image-top" alt="{{ nombre_producto }}"></img>
       <div class="card-body" style="background-color: #546c1b">
         <h3 class="card-title" style="color: #f3f3f3">{{ nombre_producto}}</h3>
         <p class="card-text" style="color: #f3f3f3">${{ precio_producto}}</p>
+        {%if request.user.is_anonymous is False %}
         <button class="btn btn-primary" id="botonAgregar">Agregar al Carro</button>
+        {% endif %}
         <button type="button" class="btn btn-secondary me-4" id="botonVer">Ver</button>
+        {% if request.user.is_authenticated and request.user.is_staff is True %} 
         <button type="button" class="btn btn-secondary" id="botonEditar">Editar</button>
         <button type="button" class="btn btn-danger" id="botonEliminar">Eliminar</button>
+        {% endif %}
       </div>
     </div>
 </div>

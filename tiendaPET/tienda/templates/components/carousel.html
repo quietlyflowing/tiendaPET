@@ -22,34 +22,40 @@
       <div class="carousel-item active">
         <div class="row">
           <div class="col-4">
-            <div class="card my-3 h-100" id="{{producto1_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto1_id}}">
               <img src="{% static producto1_imagen %}" class="card-image-top" alt="producto1_nombre">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3" style="color: #f3f3f3">{{producto1_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto1_precio}}</p>
+                  {%if user.is_authenticated %}
                 <button type="button" class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card my-3 h-100" id="{{producto2_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto2_id}}">
               <img src="{% static producto2_imagen %}" class="card-image-top" alt="{{producto2_nombre}}" style="background-color: #546c1b">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto2_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto2_precio}}</p>
+                  {%if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button type="button" class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card my-3 h-100 " id="{{producto3_id}}">
+            <div class="card my-3 shadow h-100 " id="{{producto3_id}}">
               <img src="{% static producto3_imagen %}" class="card-image-top" alt="{{producto3_nombre}}" style="background-color: #546c1b">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto3_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto3_precio}}</p>
+                  {%if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
@@ -59,36 +65,42 @@
       <div class="carousel-item">
         <div class="row">
           <div class="col-4">
-            <div class="card my-3 h-100" id="{{producto4_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto4_id}}">
               <img src="{% static producto4_imagen %}" class="card-image-top" alt="{{producto4_nombre}}" style="background-color: #546c1b">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto4_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto4_precio}}</p>
+                {%if user.is_authenticated %}
                 <button class="btn btn-primary" style="margin-right: .2rem;">Agregar al Carro </class>
-                  <button class="btn btn-secondary">Ver</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-4">
-            <div class="card my-3 h-100" id="{{producto5_id}}">
-              <img src="{% static producto5_imagen %}" class="card-image-top" alt="{{producto5_nombre}}">
-              <div class="card-body" style="background-color: #546c1b">
-                <h3 class="card-title" style="color: #f3f3f3">{{producto5_nombre}}</h3>
-                <p class="card-text" style="color: #f3f3f3">${{producto5_precio}}</p>
-                </article>
-                <button class="btn btn-primary">Agregar al Carro</button>
+                  {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="col-4">
-            <div class="card my-3 h-100" id="{{producto6_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto5_id}}">
+              <img src="{% static producto5_imagen %}" class="card-image-top" alt="{{producto5_nombre}}">
+              <div class="card-body" style="background-color: #546c1b">
+                <h3 class="card-title" style="color: #f3f3f3">{{producto5_nombre}}</h3>
+                <p class="card-text" style="color: #f3f3f3">${{producto5_precio}}</p>
+                </article>
+                {%if user.is_authenticated %}
+                <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
+                <button class="btn btn-secondary">Ver</button>
+              </div>
+            </div>
+          </div>
+          <div class="col-4">
+            <div class="card my-3 shadow h-100" id="{{producto6_id}}">
               <img src="{% static producto6_imagen %}" class="card-image-top" alt="{{producto5_nombre}}">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto6_nombre}}</a>
                 </h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto6_precio}}</p>
+                {%if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
@@ -103,69 +115,81 @@
     <div id="carruselMovil" class="carousel slide d-md-none" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <div class="card my-3 h-100" id="{{producto1_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto1_id}}">
               <img src="{% static producto1_imagen %}" class="card-image-top" alt="producto1_nombre">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3" style="color: #f3f3f3">{{producto1_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto1_precio}}</p>
+                {% if user.is_authenticated %}
                 <button type="button" class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card my-3 h-100" id="{{producto2_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto2_id}}">
               <img src="{% static producto2_imagen %}" class="card-image-top" alt="{{producto2_nombre}}" style="background-color: #546c1b">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto2_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto2_precio}}</p>
+                {% if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button type="button" class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-           <div class="card my-3 h-100 " id="{{producto3_id}}">
+           <div class="card my-3 shadow h-100 " id="{{producto3_id}}">
               <img src="{% static producto3_imagen %}" class="card-image-top" alt="{{producto3_nombre}}" style="background-color: #546c1b">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto3_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto3_precio}}</p>
+                {% if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-            <div class="card my-3 h-100" id="{{producto4_id}}">
+            <div class="card my-3 shadow h-100" id="{{producto4_id}}">
               <img src="{% static producto4_imagen %}" class="card-image-top" alt="{{producto4_nombre}}" style="background-color: #546c1b">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto4_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto4_precio}}</p>
+                {% if user.is_authenticated %}
                 <button class="btn btn-primary" style="margin-right: .2rem;">Agregar al Carro </class>
-                  <button class="btn btn-secondary">Ver</button>
+                  {% endif %}
+                <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-           <div class="card my-3 h-100" id="{{producto5_id}}">
+           <div class="card my-3 shadow h-100" id="{{producto5_id}}">
               <img src="{% static producto5_imagen %}" class="card-image-top" alt="{{producto5_nombre}}">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto5_nombre}}</h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto5_precio}}</p>
                 </article>
+                {% if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>
           </div>
           <div class="carousel-item">
-             <div class="card my-3 h-100" id="{{producto6_id}}">
+             <div class="card my-3 shadow h-100" id="{{producto6_id}}">
               <img src="{% static producto6_imagen %}" class="card-image-top" alt="{{producto5_nombre}}">
               <div class="card-body" style="background-color: #546c1b">
                 <h3 class="card-title" style="color: #f3f3f3">{{producto6_nombre}}</a>
                 </h3>
                 <p class="card-text" style="color: #f3f3f3">${{producto6_precio}}</p>
+                {% if user.is_authenticated %}
                 <button class="btn btn-primary">Agregar al Carro</button>
+                {% endif %}
                 <button class="btn btn-secondary">Ver</button>
               </div>
             </div>

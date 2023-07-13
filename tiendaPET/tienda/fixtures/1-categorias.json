@@ -10,4 +10,16 @@
 	"fields": {
 		"nombre": "Bandana"
 	}
+},	{
+	"model": "tienda.categoria",
+	"pk": 3,
+	"fields": {
+		"nombre": "Juguete"
+	}
+},	{
+	"model": "tienda.categoria",
+	"pk": 4,
+	"fields": {
+		"nombre": "Utilidad"
+	}
 }]

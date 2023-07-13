@@ -47,51 +47,75 @@
       <div class="col-6" style="background-color:#ebeff0;">
         <div class="container mt-3">
           <h2>Datos Personales</h2>
-          <form id="formaCheckout" method="POST">
+          <form id="formaCheckout" method="POST" action = {% url 'checkout' %}>
+            {% csrf_token %}
             <div class="mb-3 mt-3">
               <label for="nombre" class="form-label">Nombre</label>
               <input type="name" minlength='3' maxlength='20' class="form-control" id="nombre" name="nombre"
-                pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ\s]+" required>
+                pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ\s]+" 
+                {% if request.user.is_authenticated %}
+                  placeholder="{{request.user.cliente.primerNombre}} {{request.user.cliente.segundoNombre}} {{request.user.cliente.primerApellido}} {{request.user.cliente.segundoApellido}}"
+                  disabled
+                  {% endif %}
+                required>
             </div>
             <div class="mb-3">
               <label for="email" class="form-label">Correo Electrónico</label>
-              <input type="email" class="form-control" id="email" placeholder="ejemplo@correo.com" name="email"
+              <input type="email" class="form-control" id="email" 
+              {% if request.user.is_authenticated %}
+              placeholder="{{request.user.email}}"
+              disabled
+              {% else %}
+              placeholder="ejemplo@correo.com" 
+              {% endif %}
+              name="email"
                 required>
             </div>
             <div class="mb-3">
               <label for="direccion">Dirección</label>
               <input type="text" class="form-control" id="direccion" name="direccion"
-                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$" required>
+                pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$" 
+                {% if request.user.is_authenticated %}
+                  placeholder="{{request.user.cliente.direccion}}"
+                  disabled
+                {% endif %}
+                required>
             </div>
             <div class="mb-3">
               <input type="text" class="form-control" id="domicilio"
-                placeholder="Apartamento, casa, puerta, etc. (opcional)" name="domicilio" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$">
+                placeholder="Apartamento, casa, puerta, etc. (opcional)" name="domicilio" pattern="^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9\s]+$"
+                {% if request.user.is_authenticated %}
+                {% comment %}{{request.user.cliente.direccion_adicional}}{% endcomment %}
+                disabled
+              {% endif %}
+                >
+              
             </div>
             <div class="mb-3">
-              <label for="ciudad">Ciudad</label>
-              <input type="text" class="form-control" id="ciudad" name="ciudad" pattern="[A-Za-zñÑáéíóúÁÉÍÓÚüÜ\s]+"
-                required>
-            </div>
-
+              <label for="comuna">Comuna</label>
+              <select name="comuna" id="comuna" class="form-select" required {% if request.user.is_authenticated %}disabled{% endif %}>
+                {% if request.user.is_authenticated %}
+                <option value="{{Comuna.id}}">{{Comuna.nombre}}</option>
+                {% else %}
+                <option value="" selected>Seleccionar Región</option>
+                {% endif %}
+              </select>
+              </div>
             <label for="region" class="form-label">
               <p>Región</p>
             </label>
 
-            <select class="form-select required" id="region" name="region" required>
+      
+
+            <select class="form-select required" id="region" name="region" required {% if request.user.is_authenticated %} disabled {% endif %}>
+              {% if request.user.is_authenticated %}
+              <option value="{{Region.id}}">{{Region.numeralRomano}} - {{Region.nombre}}</option>
+              {% else %}
               <option value="" selected>Seleccionar Región</option>
-              <option value="1">Aisén</option>
-              <option value="2">Antofagasta</option>
-              <option value="3">Araucanía</option>
-              <option value="4">Arica y Parinacota</option>
-              <option value="5">Atacama</option>
-              <option value="6">Biobío</option>
-              <option value="7">Coquimbo</option>
-              <option value="8">Los Lagos</option>
-              <option value="9">Los Ríos</option>
-              <option value="10">Magallanes</option>
-              <option value="11">Maule</option>
-              <option value="12">Metropolitana</option>
-              <option value="13">Ñuble</option>
+              {% for region in Regiones %}
+              <option value="{{region.id}}">{{region.numeralRomano}} - {{region.nombre}}</option>
+                {% endfor %}
+              {% endif %}
             </select>
             <label for="region" generated="true" class="error" id="region-error"></label>
             <hr class="solid">
@@ -99,16 +123,12 @@
             <div class="container mt-3" >
               <h2>Pago</h2>
             <div class="form-check">
-              <input type="radio" class="form-check-input" id="radio1" name="optradio" value="option1" required>
+              <input type="radio" class="form-check-input" id="radio1" name="optradio" value="Crédito" required>
               <label class="form-check-label" for="radio1">Crédito</label>
             </div>
             <div class="form-check">
-              <input type="radio" class="form-check-input" id="radio2" name="optradio" value="option2">
+              <input type="radio" class="form-check-input" id="radio2" name="optradio" value="Débito">
               <label class="form-check-label" for="radio2">Débito</label>
-            </div>
-            <div class="form-check">
-              <input type="radio" class="form-check-input" id="radio3" name="optradio" value="option3">
-              <label class="form-check-label">Paypal</label>
             </div>
             <label for="optradio" generated="true" class="error" id="optradio-error"></label>
 
@@ -132,46 +152,47 @@
               <input type="month"  class="form-control" id="fecha" min="2024-01" max="2035-12" placeholder="MM/AA" name="fecha"
                required>
             </div>
-            <input type="submit" class="btn btn-primary" value="Pagar" id="botonPagar">
+            <input type="button" class="btn btn-primary" value="Pagar" id="botonPagar">
             <br> <br>
           </div>
           </form>
         </div>
       </div>
-
-    
-        <div class="col">
-          <h2>Carro</h2>
+      <div class="col-6">
+        <h2>Carro</h2>
         <div class="container mt-3">
-          <table class="table">
-            <thead>
-              <tr>
-                <th scope="col"><i class="fa-regular fa-image"></i></th>
-                <th scope="col">Producto</th>
-                <th scope="col">Precio</th>
-                <th scope="col">Cantidad</th>
-                <th scope="col">Total</th>
-              </tr>
-              <tbody id="tablaCheckout">
-                {% for detalle in Detalles %}
-                <article id={{detalle.producto.id}}>
-                 <tr>
-                  <th scope = "row"><img src="{% static detalle.producto.imagen %}" class="img-thumbnail"></img></th>
-                  <td>{{detalle.producto.nombre}}</td>
-                  <td>${{detalle.producto.precio}}</td>
-                  <td><p>{{detalle.cantidad}}</p></td>
-                  <td><p>${{detalle.precioTotal}}</p> </td>
-                </tr> 
-              </article>
-                {% endfor %} 
-              </tbody>
-              </thead>
-          </table>
-          <div>
-            <h4><b>Total a pagar:</b> ${{Carrito.valorTotal}}</h4>
-          </div>
+        <table class="table">
+          <thead>
+            <tr>
+              <th scope="col"><i class="fa-regular fa-image"></i></th>
+              <th scope="col">Producto</th>
+              <th scope="col">Precio</th>
+              <th scope="col">Cantidad</th>
+              <th scope="col">Total</th>
+            </tr>
+            <tbody id="tablaCheckout">
+              {% for detalle in Detalles %}
+              <article id={{detalle.producto.id}}>
+               <tr>
+                <th scope = "row"><img src="{% static detalle.producto.imagen %}" class="img-thumbnail"></img></th>
+                <td>{{detalle.producto.nombre}}</td>
+                <td>${{detalle.producto.precio}}</td>
+                <td><p>{{detalle.cantidad}}</p></td>
+                <td><p>${{detalle.precioTotal}}</p> </td>
+              </tr> 
+            </article>
+              {% endfor %} 
+            </tbody>
+            </thead>
+        </table>
+        <div>
+          <h4><b>Total a pagar:</b> ${{Carrito.valorTotal}}</h4>
         </div>
       </div>
+    
+       
+      </div>
+    </div>
     </div>
   </div>
 {% include 'components/footer.html' %}
@@ -179,7 +200,6 @@
   integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.6.4.min.js" integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.5/dist/jquery.validate.min.js" integrity="sha384-aEDtD4n2FLrMdE9psop0SHdNyy/W9cBjH22rSRp+3wPHd62Y32uijc0H2eLmgaSn" crossorigin="anonymous"></script>
-  <script src="{% static 'tienda/js/checkoutValidate.js' %}"></script>
   <script src="{% static 'tienda/js/app.js' %}"></script>  
 </body>
 

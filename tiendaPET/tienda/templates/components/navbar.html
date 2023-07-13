@@ -1,7 +1,8 @@
 {% load static %}  
   <!-- Inicio Navbar -->
 
-    <nav class="navbar navbar-expand-md navbar-dark" id="tiendaNav" style="background-color: #546c1b;">
+    <nav class="navbar navbar-expand-md shadow navbar-dark" id="tiendaNav" style="background-color: #546c1b;">
+      {% csrf_token %}
       <div class="container-fluid">
         <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -22,38 +23,44 @@
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'gatos' %} active {% endif %}" href="/gatos">Productos para Gatos</a>
               </li>
-              {% if request.user.is_staff is False%}
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'contacto' %}active{% endif %}" href="/contacto">Contacto</a>
               </li>
-              {% endif %}
-              {% if request.user.is_staff is False%}
               <li class="nav-item">
                 <a class="nav-link {% if request.resolver_match.url_name == 'donar'%}active {% endif %}" href="/donar"><b>Donar</b></a>
               </li>
-              {% endif %}
             </ul>
+            {% if request.user.is_staff%}
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == 'mensajes'%}active {% endif %}" href="/mensajes">Mensajes</a>
+              </li>
+            
+
+            {% if request.user.is_superuser %}
+              <li class="nav-item">
+                <a class="nav-link" href="/admin">Panel de admin de Django</a>
+              </li>
+            {% endif %}
+            </ul>  
+            {% endif %}
+            <ul class="navbar-nav ms-auto">
+              {% if request.user.is_authenticated %}
+            <li class="nav-item">
+              <a class="nav-link" id="userLink" href="#">Hola, {{user.cliente.primerNombre}}  {{user.cliente.primerApellido}}</a>
+            </li>
+            <a class="nav-link" id="logoutLink" href="#">Cerrar Sesión</a>
+            </li>            
+            {% else %}
+            {% if request.path != "/signup/" %}
+            <li class="nav-item">
+              <a class="nav-link" id="loginLink" href="#">Iniciar Sesión</a>
+            </li>
+            {% endif %}
+            {% endif %}
+          </ul>
           </div>
         </div>
-      {% comment %} Se muere esto hasta que tenga tiempo para implementar un R más inteligente. Además, nunca estuvo en los requerimientos. {% endcomment %}
-        {% comment %} <form role="search">
-          <input class="form-control" data-bs-toggle="modal" data-bs-target="#modalBusqueda" type="search" id="busqueda" placeholder="Búsqueda" aria-label="Búsqueda">
-        </form> {% endcomment %}
-        <ul class="navbar-nav me-auto">
-          {% if request.user.is_authenticated and request.user.cliente is not None and request.user.is_staff is False %}
-        <li class="nav-item">
-          <a class="nav-link" id="userLink" href="#">Hola, {{user.cliente.primerNombre}}  {{user.cliente.primerApellido}}</a>
-        </li>
-        {% elif request.user.is_authenticated and request.user.is_staff is True%}
-        <li class="nav-item">
-          <a class="nav-link" id="loginLink" href="#">Hola, {{user.email}} </a>
-        </li>
-        {% else %}
-        <li class="nav-item">
-          <a class="nav-link" id="loginLink" href="#">Iniciar Sesión</a>
-        </li>
-        {% endif %}
-      </ul>
       </div>
     </nav>
     <!--fin navbar-->

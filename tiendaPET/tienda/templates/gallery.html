@@ -22,11 +22,9 @@
   <body>
     {% include  'components/navbar.html' %}
     <div class="container">
-      {% if request.user.is_staff is False%}
       <div class="d-flex py-3 align-items-center flex flex-row-reverse" id="indicadorCarrito">
       {% include 'components/cartButton.html' with carrito_numero=cart_cantidad %}
     </div>
-      {% endif %}
       {% comment %} {% include 'components/alert.html' %} {% endcomment %}
       {% include 'components/jumbotron.html' %}
       <div class="row">
@@ -34,7 +32,7 @@
           <h1>Lo más visto</h1>
         </div>
       </div>
-
+      {% csrf_token %}
       <div class="col-4 text-end d-md-none" style=" margin-left: 21.5rem; margin-bottom: 1rem;">	
         <button class="btn btn-primary" type="button" data-bs-target="#carruselMovil" data-bs-slide="prev">
           <i class="fa-solid fa-arrow-left"></i>

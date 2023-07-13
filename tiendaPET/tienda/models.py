@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib.auth.models import AbstractBaseUser, PermissionsMixin
 from django.utils import timezone
 from django.utils.translation import gettext_lazy as _
-
+from django.utils.timezone import now
 from .managers import CustomUserManager
 
 
@@ -94,9 +94,12 @@ class DetalleCarrito(models.Model):
 class Donante(models.Model):
     rut=models.IntegerField(blank=False, null=False)
     dv=models.CharField(blank=False, max_length=1, null=False)
+    nombre=models.CharField(blank=False, max_length=255, null=False)
     primerApellido=models.CharField(blank=False, max_length=100, null=False)    
     segundoApellido=models.CharField(blank=True, max_length=100, null=True)
     direccion=models.CharField(blank=False, max_length=100, null=False)
+    correo=models.CharField(blank=False, max_length=255, null=False, default='mail@correo.cl')
+    telefono=models.CharField(blank=False, max_length=13, null=False, default='+5691234567')
 
 class MensajesContacto(models.Model):
     DUDA="DD"
@@ -113,3 +116,15 @@ class MensajesContacto(models.Model):
     (DEFAULT, "Seleccione un motivo de consulta")]
     motivoContacto=models.CharField(max_length=2, choices=MOTIVO_CONSULTA_CHOICES, default=DEFAULT)
     message=models.TextField(blank=False, max_length=700, null=False)
+
+
+class Pago(models.Model):
+    donante = models.ForeignKey('Donante', on_delete=models.CASCADE, null=True)
+    cliente = models.ForeignKey('Cliente', on_delete=models.CASCADE, null=True)
+    metodo_pago = models.CharField(blank=False, max_length=100, null=False)
+    titular = models.CharField(blank=False, max_length=255, null=False)
+    numero_tarjeta = models.IntegerField(blank=False, null=False) 
+    fecha_tarjeta = models.CharField(blank=False, max_length=15, default="")
+    monto = models.IntegerField(blank=False, null=False, default=0)
+    pagado_en = models.DateTimeField(blank=False, auto_now_add=True)
+    detalle = models.CharField(blank=True, null=True, max_length=5000)

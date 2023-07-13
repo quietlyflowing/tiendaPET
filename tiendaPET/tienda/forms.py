@@ -26,38 +26,39 @@ class DonarForm(forms.Form):
     )
     nombre = forms.CharField(
         min_length=3,
-        max_length=15,
+        max_length=40,
         label='Nombre',
         required=True,
-        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+', 'title': 'El Nombre debe tener entre 3 a 15 caracteres', 'class': 'form-control'})
+        widget=forms.TextInput(attrs={'title': 'El Nombre debe tener entre 3 a 15 caracteres', 'class': 'form-control'})
     )
     apellido = forms.CharField(
         min_length=3,
-        max_length=15,
+        max_length=40,
         label='Apellido',
         required=True,
-        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+', 'title': 'Ingresa solo letras y espacios', 'class': 'form-control'})
+        widget=forms.TextInput(attrs={'title': 'Ingresa solo letras y espacios', 'class': 'form-control'})
     )
     rut = forms.CharField(
         max_length=12,
         label='RUT',
         required=True,
-        widget=forms.TextInput(attrs={'pattern': r'\d{7,8}-[0-9kK]{1}', 'title': 'Ingresa un RUT válido', 'class': 'form-control'})
+        widget=forms.TextInput(attrs={ 'title': 'Ingresa un RUT válido', 'class': 'form-control'})
     )
     correo = forms.EmailField(
-        max_length=35,
+        max_length=50,
         label='Correo Electrónico',
-        required=True
+        required=True,
+        widget=forms.TextInput(attrs={'class':'form-control'})
     )
     celular = forms.CharField(
         max_length=11,
         label='Celular',
         required=True,
-        widget=forms.TextInput(attrs={'pattern': '(56|9)(\d{8}|\d{9})', 'title': 'Ingresa un número de celular válido', 'class': 'form-control'})
+        widget=forms.TextInput(attrs={'title': 'Ingresa un número de celular válido', 'class': 'form-control'})
     )
     METODO_PAGO_CHOICES = [
-        ('option1', 'Crédito'),
-        ('option2', 'Débito')
+        ('Crédito', 'Crédito'),
+        ('Débito', 'Débito')
     ]
 
     optradio = forms.ChoiceField(
@@ -69,7 +70,7 @@ class DonarForm(forms.Form):
     )
     titular = forms.CharField(
         max_length=40,
-        widget=forms.TextInput(attrs={'pattern': r'^[a-zA-ZÀ-ÖØ-öø-ÿ\s.\'-]{1,40}$', 'class': 'form-control'}),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
         required=True,
         label='Titular de la tarjeta',
         error_messages={'required': 'Debe ingresar un nombre válido'}
@@ -77,7 +78,7 @@ class DonarForm(forms.Form):
     numero = forms.CharField(
         min_length=16,
         max_length=19,
-        widget=forms.TextInput(attrs={'pattern': r'[0-9]{4}?[0-9]{4}?[0-9]{4}?[0-9]{4}', 'class': 'form-control'}),
+        widget=forms.TextInput(attrs={'class': 'form-control'}),
         required=True,
         label='Número de la tarjeta',
         error_messages={'required': 'El número de tarjeta no es válido'}
@@ -85,12 +86,12 @@ class DonarForm(forms.Form):
     codigo = forms.CharField(
         min_length=3,
         max_length=3,
-        widget=forms.TextInput(attrs={'pattern': r'^[0-9]{3}$', 'class': 'form-control'}),
+        widget=forms.TextInput(attrs={ 'class': 'form-control'}),
         required=True,
         label='Código de seguridad',
         error_messages={'required': 'Debe ingresar un código válido de 3 dígitos'}
     )
-    fecha = forms.DateField(
+    fecha = forms.CharField(
         widget=forms.DateInput(attrs={'type': 'month', 'min': '2024-01', 'max': '2045-12', 'class': 'form-control'}),
         required=True,
         label='Fecha de caducidad',
@@ -111,3 +112,62 @@ class ContactoForm(forms.Form):
     label='He leído y acepto los términos y condiciones.', 
     error_messages= {'required': 'Debe aceptar nuestros términos y condiciones.'}, 
     widget=forms.CheckboxInput(attrs={'class': 'form-check'}))
+
+class RegistroForm(forms.Form):
+
+    correo = forms.EmailField(
+        max_length=35,
+        label='Correo Electrónico',
+        required=True,
+        widget=forms.TextInput(attrs={ 'class': 'form-control'})
+    )
+    password = forms.CharField(
+        label='Contraseña',
+        widget=forms.PasswordInput(attrs={'class': 'form-control', 'id': 'password'}),
+        min_length=8,
+    ) 
+    confirm_password = forms.CharField(
+        label='Confirmar Contraseña',
+        widget=forms.PasswordInput(attrs={'class': 'form-control'}),
+        min_length=8
+    )
+    primer_nombre = forms.CharField(
+        min_length=3,
+        max_length=15,
+        label='Primer Nombre',
+        required=True,
+        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+', 'class': 'form-control'})
+    )
+    segundo_nombre = forms.CharField(
+        min_length=3,
+        max_length=15,
+        label='Segundo Nombre',
+        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+', 'class': 'form-control', 'default':' '})
+    )
+    primer_apellido = forms.CharField(
+        min_length=3,
+        max_length=15,
+        label='Primer Apellido',
+        required=True,
+        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+', 'class': 'form-control'})
+    )
+    segundo_apellido = forms.CharField(
+        min_length=3,
+        max_length=15,
+        label='Segundo Apellido',
+        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ\s]+', 'class': 'form-control', 'default':' '})
+    )
+    direccion = forms.CharField(
+        min_length=10,
+        max_length=150,
+        label='Dirección',
+        required=True,
+        widget=forms.TextInput(attrs={'pattern': '[A-Za-zñÑáéíóúÁÉÍÓÚ0-9\s]+','class': 'form-control'})
+    ) 
+    rut = forms.CharField(
+        min_length=9,
+        max_length=10,
+        label='RUT',
+        required=True,
+        widget=forms.TextInput(attrs={'class': 'form-control'})
+    )

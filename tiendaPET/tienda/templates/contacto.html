@@ -21,7 +21,7 @@
     <!-- Cuerpo -->
     {% include  'components/navbar.html' %}
     <!-- Inicio contenedor -->
-    <div class="container">
+    <div class="container" style="position: relative; top: 5rem;">
       <!--indicador de carrito de compra-->
       {% if request.user.is_staff is False%}
       <div class="d-flex py-3 align-items-center flex flex-row-reverse" id="indicadorCarrito">
@@ -31,7 +31,7 @@
       <!-- Inicio de la columna de Boostrap -->
       <div class="col-6" style="background-color:white; padding-bottom:8rem;">
         <!-- Inicio del campo Forma -->
-        <form id="formaContacto" method="POST">
+        <form id="formaContacto" method="POST" action="{% url 'contacto' %}">
           {% csrf_token %}
           
           <h1>Contacto</h1>
@@ -62,7 +62,7 @@
           {{ form.agree }}
         </div>
           <div class="mb-3" style="padding-top: 1rem">
-            <input type="submit" class="btn btn-success btn-lg" value="Enviar" id="botonEnviar">
+            <input type="button" class="btn btn-success btn-lg" value="Enviar" id="botonEnviar">
           </div>
         </form>
       </div>

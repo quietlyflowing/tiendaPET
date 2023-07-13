@@ -1,0 +1,13 @@
+[{
+	"model": "tienda.categoria",
+	"pk": 1,
+	"fields": {
+		"nombre": "Correa"
+	}
+}, {
+	"model": "tienda.categoria",
+	"pk": 2,
+	"fields": {
+		"nombre": "Bandana"
+	}
+}]

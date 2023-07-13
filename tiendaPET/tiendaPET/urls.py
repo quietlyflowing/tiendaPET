@@ -2,6 +2,7 @@ from tienda import views
 from django.conf import settings
 from django.conf.urls.static import static
 from django.contrib import admin
+from django.urls import path
 """
 URL configuration for tiendaPET project.
 
@@ -28,11 +29,15 @@ urlpatterns = [
     path('perros/', views.dogs, name='perros'),
     path('contacto/', views.contactInForm, name='contacto'),
     path('donar/', views.donarInForm, name='donar'),
-    path('checkout/', views.checkout),
+    path('checkout/', views.checkout, name='checkout'),
+    path('signup/', views.registroForm, name='signup'),
+    path('user/', views.editUser, name='user'),
+    path('mensajes/', views.contactMessages, name='messages'),
     #Paths que implementan API/AJAX
     path('ajax/addItem', views.addToCarritoAction),
     path('ajax/getModalLogin/', views.modalLogin),
     path('ajax/login/', views.login),
+    path('ajax/logout/', views.logout),
     path('ajax/removeAllTheSameItems/', views.removeSameRowAction),
     path('ajax/updateItems', views.updateCartAction),
     path('ajax/getItems/', views.getCartDetails),
@@ -40,12 +45,18 @@ urlpatterns = [
     path('ajax/getModalProducto/<int:id>', views.modalProducto),
     path('ajax/cartButtonUpdate', views.reloadCartButtton), 
     path('ajax/deleteEntireCart/', views.deleteAllCart),
-    path('ajax/removeProduct/<int:producto_id>', views.removeProduct),
+    path('ajax/removeProduct/', views.removeProduct),
     path('ajax/addProduct', views.addProduct),
     path('ajax/getModalCUD', views.modalCUD),
     path('ajax/getModalUpdate/<int:producto_id>', views.modalUpdate),
-    path('ajax/updateProduct/<int:producto_id>', views.updateProduct),
-    path('ajax/getModalConfirm', views.modalConfirmaBorradoProducto),
-    path('ajax/getCartStats', views.cartStats)
+    path('ajax/updateProduct/', views.updateProduct),
+    path('ajax/getModalConfirm/', views.modalConfirmaBorradoProducto),
+    path('ajax/getCartStats/', views.cartStats),
+    path('ajax/getModalDonacion/', views.modalDonacion),
+    path('ajax/getModalErrores/', views.modalErrores),
+    path('ajax/getModalPass/', views.modalCambioPass),
+    path('ajax/changePass/', views.changePass),
+    path('ajax/getComunas/<int:id>', views.comunasFromRegion),
+    path('ajax/deleteMessage/<int:id>', views.removeMessage)
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
 

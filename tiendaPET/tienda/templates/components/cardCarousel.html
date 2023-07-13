@@ -1,11 +1,13 @@
 {% load static %}
 
 <!--Card-->
-<div class="card my-3 h-100" id="{{ id_producto }}">
+<div class="card shadow my-3 h-100" id="{{ id_producto }}">
   <img src="{% static imagen_producto %}" class="card-image-top" alt="{{ nombre_producto }}">
   <div class="card-body" style="background-color: #546c1b">
     <h3 class="card-title" style="color: #f3f3f3" style="color: #f3f3f3">{{ nombre_producto }}</h3>
     <p class="card-text" style="color: #f3f3f3">${{ precio_producto }}</p>
+    {% if request.user.is_anonymous is False %}
     <button type="button" class="btn btn-primary">Agregar al Carro</button>
+    {% endif %}
     <button class="btn btn-secondary">Ver</button>
   </div>

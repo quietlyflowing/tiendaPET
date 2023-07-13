@@ -38,7 +38,7 @@
     }
      
 
-    .nav-link.active::after {
+  .nav-link.active::after {
       font-family: "FontAwesome";
       content: "\f111"; /* the caret */
       position: relative;
@@ -46,12 +46,33 @@
       bottom: -.8rem; /* position under the text */
       font-size: .4rem;
   }
+
 #id_nombre-error {
   color: #dc3545;
   margin-top: .5rem;
 }
 
 #id_email-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_cantidad-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_apellido-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_rut-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_correo-error {
   color: #dc3545;
   margin-top: .5rem;
 }
@@ -66,6 +87,41 @@
   margin-top: .5rem;
 }
 
+#id_celular-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_numero-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_codigo-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_fecha-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#optradio-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_titular-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#optradio-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
 #agree-error {
   color: #dc3545;
   margin-top: -1.5rem;
@@ -73,3 +129,74 @@
   position: relative;
   top: revert;
 }
+#email-error {
+  color: #dc3545;
+  margin-top: -1.5rem;
+  white-space: nowrap;
+  position: relative;
+  top: revert;
+}
+
+#id_confirm_password-error {
+  color: #dc3545;
+  margin-top: -1.5rem;
+  white-space: nowrap;
+  position: relative;
+  top: revert;
+}
+
+#id_password-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#password-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_primer_nombre-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_primer_apellido-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#id_direccion-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#selectorRegion-error {
+  color: #dc3545;
+  margin-top: .5rem;
+}
+
+#boxRegistro {
+  background-color: lightgrey;
+  width: 600px;
+  border: 1px solid lightgray;
+  border-radius: 10px;
+  padding: 10px;
+  margin: auto;
+}
+
+
+#imagen-fondo {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+#imagen-fondo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+

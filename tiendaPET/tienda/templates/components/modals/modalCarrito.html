@@ -1,5 +1,6 @@
   {% load static %}
   {% if Detalles %}
+  {% csrf_token %}
   <!--Inicio Modal Carrito-->
   <div class="modal fade" id="modalCarrito" data-bs-backdrop="static" data-bs-keyboard="false" >
     <div class="modal-dialog modal-dialog-centered">
